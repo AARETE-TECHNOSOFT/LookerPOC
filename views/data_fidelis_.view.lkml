@@ -86,7 +86,7 @@ view: data_fidelis_ {
     #value_format:"$0.000,,\" M\""
     value_format:"$0,\" K\""
     html:
-    <p style="font-size:20px;font-weight: bold;"><img src="https://img.icons8.com/external-kmg-design-outline-color-kmg-design/32/000000/external-dollar-sign-business-management-kmg-design-outline-color-kmg-design.png" width="30" height="30"/>{{rendered_value}} </p>
+    <p style="font-size:20px;font-weight: bold;">{{rendered_value}} </p>
     ;;
   }
   measure: sum_dummy_savings

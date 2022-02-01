@@ -36,7 +36,7 @@ view: provider_overview_fd {
     sql: ${annual_spend} ;;
     value_format: "$0.000,,\" M\""
     html:
-    <p style="font-size:20px;font-weight: bold;"><img src="https://img.icons8.com/external-kmg-design-outline-color-kmg-design/32/000000/external-dollar-sign-business-management-kmg-design-outline-color-kmg-design.png" width="30" height="30"/>{{rendered_value}} </p>
+    <p style="font-size:20px;font-weight: bold;">{{rendered_value}} </p>
     ;;
   }
 
@@ -63,7 +63,7 @@ view: provider_overview_fd {
     type: number
     sql: ${TABLE}.DISTINCT_NPI_BILLED ;;
     html:
-     <p style="font-size:20px;font-weight: bold;"><img src="https://img.icons8.com/ios/50/000000/hospital-3.png"width="30" height="30"/>{{rendered_value}}</p>
+     <p style="font-size:20px;font-weight: bold;"><img src="https://img.icons8.com/ios/50/000000/hospital-3.png"width="30" height="30" />&emsp;{{rendered_value}}</p>
     ;;
   }
 
@@ -101,7 +101,7 @@ view: provider_overview_fd {
     #value_format:"0,\" K\""
     html:
      <p style="font-size:20px;font-weight: bold;">
-      <img src="https://img.icons8.com/ios/50/000000/conference-call--v1.png" width="30" height="30" /> {{rendered_value}} </p>
+      <img src="https://img.icons8.com/ios/50/000000/conference-call--v1.png" width="30" height="30" />&emsp;{{rendered_value}} </p>
     ;;
   }
   # dimension: Members_testing {
