@@ -16,7 +16,7 @@ view: market_share_fd {
     type: string
     sql: ${TABLE}.DATA ;;
     html:
-        <p style="font-size:20px;font-weight: bold;"> {{rendered_value}}</p>
+        <p style="font-size:23px;font-weight: bold;"> {{rendered_value}}</p>
 
     ;;
   }
