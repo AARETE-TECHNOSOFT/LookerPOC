@@ -50,7 +50,12 @@ view: spend_in_previous_years_fd {
     type: string
     sql: ${TABLE}.SECTION_ ;;
   }
-
+  dimension: current_year {
+    sql: 1 ;;
+    html:
+    <h1 style="color:black;background-color:#f4f4f4;font-size: 16pt; font-family: 'Georgia';margin:10px auto;text-align:LEFT; padding-top: 20px;padding-bottom: 20px;">Current Year 2020</h1>
+    ;;
+  }
   measure: count {
     type: count
     drill_fields: []

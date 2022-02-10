@@ -16,6 +16,7 @@ view: data_fidelis_ {
     sql: ${TABLE}.CLAIM_CNT ;;
   }
   measure: Total_claim_cnt {
+    label: "Claim Count"
     type: sum
     sql: ${TABLE}.claim_cnt ;;
   }
@@ -36,6 +37,7 @@ view: data_fidelis_ {
   }
 
   dimension: cxt_edit {
+    label: "Initiative"
     type: string
     sql: ${TABLE}.CXT_EDIT ;;
   }
@@ -110,6 +112,7 @@ view: data_fidelis_ {
     value_format:"$0"
   }
   measure: DummySavings_Total {
+    label: "Total Savings"
     type: sum
     sql: ${TABLE}.dummy__savings ;;
     #value_format:"$0"
@@ -125,6 +128,7 @@ view: data_fidelis_ {
   }
 
   dimension: dummy_initiative_TAG {
+    label: "Initiative Tag"
     type: string
     sql: ${TABLE}.DUMMY_INITIATIVE_TAG ;;
 
@@ -218,10 +222,12 @@ view: data_fidelis_ {
   }
 
   dimension: total_billed_amt {
+    label: "Total Billed"
     type: number
     sql: ${TABLE}.TOTAL_BILLED_AMT ;;
   }
   measure: Total_billed_amt_ {
+    label: "Total Billed"
     type: sum
     sql: ${TABLE}.total_billed_amt ;;
     value_format: "$0000"
