@@ -12,6 +12,7 @@ view: data_fidelis_ {
   }
 
   dimension: claim_cnt {
+    label: "Claim Count"
     type: string
     sql: ${TABLE}.CLAIM_CNT ;;
   }
@@ -134,11 +135,13 @@ view: data_fidelis_ {
 
   }
   dimension: excd {
+    label: "EXCD"
     type: string
     sql: ${TABLE}.EXCD ;;
   }
 
   dimension: groupname {
+    label: "Name"
     type: string
     sql: ${TABLE}.GROUPNAME ;;
   }
@@ -234,11 +237,13 @@ view: data_fidelis_ {
   }
 
   dimension: total_paid_amt {
+    label: "Total Paid"
     type: number
     sql: ${TABLE}.TOTAL_PAID_AMT ;;
   }
 
   measure: total_paid_amt_ {
+    label: "Total Paid"
     type: sum
     sql: ${TABLE}.total_billed_amt ;;
     value_format: "$0000"

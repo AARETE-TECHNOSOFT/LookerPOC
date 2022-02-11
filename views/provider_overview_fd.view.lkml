@@ -22,9 +22,11 @@ view: provider_overview_fd {
   }
 
   dimension: prov_irs_num_tin {
+    label: "Tin"
     primary_key: yes
     type: number
     sql: ${TABLE}.PROV_IRS_NUM_TIN ;;
+    value_format: "0"
   }
   measure:  count_prov_irs_num_tin{
     type: count_distinct

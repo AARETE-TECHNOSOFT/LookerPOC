@@ -1,8 +1,8 @@
-view: indicator_fd {
+view: Indicator_Fid {
   derived_table: {
     sql: select data_up value ,indicator from ms_fd
          union all
-        select data_update value ,indicator_  from percent_fd
+        select data_update value ,indicator_  from percent_update_fd
 
           ;;
   }
@@ -15,7 +15,7 @@ view: indicator_fd {
   dimension:  value{
     type:string
     sql: ${TABLE}.value ;;
-   # value_format: "0.00%"
+    # value_format: "0.00%"
   }
   dimension:  indicator{
     type: string

@@ -32,14 +32,9 @@ explore: provider_derivetable {
   }
 
 }
-explore: spend_breakout_fd {
-
-}
-
-
-explore: indicator_fd {
-
-}
+explore: spend_breakout_fd {}
+explore: indicator_fd {}
+explore: Indicator_Fid {}
 explore: percent_fd {}
 explore: spend_in_previous_years_fd {}
 explore: ms_fd {}
@@ -48,7 +43,7 @@ explore: quality_indicator_fd {}
 explore: mlc_fd {}
 explore: hospital_profit_fd {}
 explore: market_share_fd {}
-
+explore: percent_update_fd {}
 #explore: hr_dates {}
 datagroup: lookerpoc_default_datagroup {
   sql_trigger: SELECT 1  ;;
