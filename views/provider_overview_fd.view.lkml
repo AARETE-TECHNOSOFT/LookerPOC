@@ -102,10 +102,11 @@ view: provider_overview_fd {
     sql: ${TABLE}.MEMBER_COUNT ;;
     #value_format:"0,\" K\""
     html:
-     <p style="font-size:23px;font-weight: bold;">
-      <img src="https://img.icons8.com/ios/50/000000/conference-call--v1.png" width="30" height="30" />&emsp;{{rendered_value}} </p>
+
+      <p><img src="https://img.icons8.com/ios/50/000000/conference-call--v1.png" width="30" height="30" />&emsp;{{rendered_value}} </p>
     ;;
   }
+  #<p style="font-size:23px;font-weight: bold;">
   # dimension: Members_testing {
   #   type: number
   #   sql: ${TABLE}.MEMBER_COUNT ;;
