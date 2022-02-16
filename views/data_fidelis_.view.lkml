@@ -89,7 +89,7 @@ view: data_fidelis_ {
     #value_format:"$0.000,,\" M\""
     value_format:"$0,\" K\""
     html:
-    <p style="font-size:20px;font-weight: bold;">{{rendered_value}} </p>
+    <p style="font-size:20px;">{{rendered_value}} </p>
     ;;
   }
   measure: sum_dummy_savings
@@ -124,7 +124,7 @@ view: data_fidelis_ {
     type: string
     sql: ${TABLE}.DUMMY_INITIATIVE_TAG ;;
     html:
-    <p style="font-size:20px;font-weight: bold;">{{rendered_value}}</p>
+    <p style="font-size:20px;">{{rendered_value}}</p>
     ;;
   }
 
