@@ -261,4 +261,36 @@ view: data_fidelis_ {
       url: "https://thirdi.looker.com/dashboards/108?Dummy%20Initiative%20Tag=&Year%20="
     }
   }
+  measure: test1 {
+    sql: 1 ;;
+    html:
+    <html>
+    <p style=" text-align:center;font-size:23px;">01/01/2020</p>
+    </html>
+    ;;
+  }
+  measure: test2 {
+    sql: 1 ;;
+    html:
+    <html>
+    <p style=" text-align:center;font-size:23px;">01/01/2020</p>
+    </html>
+    ;;
+  }
+  measure: test3 {
+    sql: 1 ;;
+    html:
+    <html>
+    <p style=" text-align:center;font-size:20px;">Cxt Edit</p>
+    </html>
+    ;;
+  }
+  measure: test4 {
+    sql: 1 ;;
+    html:
+    <html>
+    <p style=" text-align:center;font-size:20px;">05/01/2019</p>
+    </html>
+    ;;
+  }
 }
