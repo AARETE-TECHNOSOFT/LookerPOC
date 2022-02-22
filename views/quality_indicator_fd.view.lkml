@@ -28,7 +28,7 @@ view: quality_indicator_fd {
     type: sum
     sql: ${data} ;;
     html:
-    <p style="font-size:20px;font-weight: bold;"><img src="https://img.icons8.com/ios/50/000000/star--v1.png"width="30" height="30"/>{{rendered_value}} </p>
+    <p style="font-size:23px;">{{rendered_value}} </p>
     ;;
   }
 

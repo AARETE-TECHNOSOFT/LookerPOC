@@ -20,7 +20,7 @@ view: percent_fd {
     sql: ${TABLE}.data_ ;;
     value_format: "0%"
     html:
-    <p style="font-size:20px;font-weight: bold;"><img src="https://img.icons8.com/dotty/80/000000/wall-clock.png" width="30" height="30"/>{{rendered_value}}</p>
+    <p style="font-size:23px;">{{rendered_value}}</p>
     ;;
   }
   measure: sum_Data_K {
@@ -36,7 +36,7 @@ view: percent_fd {
     sql: ${data_} ;;
     value_format: "0.00%"
     html:
-    <p style="font-size:20px;font-weight: bold;"><img src="https://img.icons8.com/ios/50/000000/box--v1.png" width="30" height="30"/> {{rendered_value}}</p>
+    <p style="font-size:23px;">{{rendered_value}}</p>
     ;;
   }
   measure: average_data_ {

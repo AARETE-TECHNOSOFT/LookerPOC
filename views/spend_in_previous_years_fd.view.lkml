@@ -23,7 +23,7 @@ view: spend_in_previous_years_fd {
     # value_format: "$0.0000,\" K\""
     value_format: "$0"
     html:
-    <p style="font-size:20px;font-weight: bold;"><img src="https://img.icons8.com/ios/50/000000/tear-off-calendar--v1.png" width="30" height="30"/> {{rendered_value}}</p>
+    <p style="font-size:23px;">{{rendered_value}}</p>
     ;;
   }
   measure: total_data_ {

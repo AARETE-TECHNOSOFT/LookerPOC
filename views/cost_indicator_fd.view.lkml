@@ -28,7 +28,7 @@ view: cost_indicator_fd {
     value_format: "0.00%"
     filters: [indicator: "Fidelis Overall NR %"]
     html:
-    <p style="font-size:20px;font-weight: bold;"><img src="https://img.icons8.com/material-rounded/24/000000/graph.png" width="30" height="30"/> {{rendered_value}}</p>
+    <p style="font-size:23px;">{{rendered_value}}</p>
 
     ;;
   }
@@ -39,7 +39,7 @@ view: cost_indicator_fd {
     filters: [indicator: "Cost Report Other Medicaid Providers Net Revenue %"]
     value_format: "0.00%"
     html:
-    <p style="font-size:20px;font-weight: bold;"><img src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-sim-card-interface-kiranshastry-lineal-kiranshastry.png" width="30" height="30"/> {{rendered_value}}</p>
+    <p style="font-size:23px;">{{rendered_value}}</p>
 
     ;;
   }

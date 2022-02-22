@@ -65,9 +65,10 @@ view: provider_overview_fd {
     type: number
     sql: ${TABLE}.DISTINCT_NPI_BILLED ;;
     html:
-    <p style="font-size:23px;"><img src="https://img.icons8.com/ios/50/000000/hospital-3.png"width="30" height="30" />&emsp;{{rendered_value}}</p>
+    <p style="font-size:23px;">{{rendered_value}}</p>
     ;;
   }
+  #<img src="https://img.icons8.com/ios/50/000000/hospital-3.png"width="30" height="30" />
 
   dimension: dummy__savings {
     type: number

@@ -27,7 +27,7 @@ view: hospital_profit_fd {
     #value_format:"$00000.00,\" K\""
     value_format: "$0\" K\""
     html:
-    <p style="font-size:20px;font-weight: bold;"><img src="https://img.icons8.com/material-rounded/24/000000/graph.png" width="30" height="30"/> {{rendered_value}}</p>
+    <p style="font-size:23px;">{{rendered_value}}</p>
     ;;
   }
 

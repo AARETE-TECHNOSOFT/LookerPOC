@@ -104,7 +104,7 @@ view: data_fidelis_ {
     sql: ${TABLE}.dummy__savings ;;
     value_format:"$0.000,,\" M\""
     html:
-    <p style="font-size:20px background-color:powderblue;font-weight: bold;">{{rendered_value}}</p>;;
+    <p style="font-size:23px ;">{{rendered_value}}</p>;;
   }
   measure: sum_dummy_savings_Dollers
   {
@@ -233,7 +233,7 @@ view: data_fidelis_ {
     label: "Total Billed"
     type: sum
     sql: ${TABLE}.total_billed_amt ;;
-    value_format: "$0000"
+    value_format: "$#,##0"
   }
 
   dimension: total_paid_amt {
@@ -246,7 +246,8 @@ view: data_fidelis_ {
     label: "Total Paid"
     type: sum
     sql: ${TABLE}.total_billed_amt ;;
-    value_format: "$0000"
+    value_format: "$#,##0"
+    #value_format: "$0000"
   }
 
   measure: count {
