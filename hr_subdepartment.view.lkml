@@ -165,16 +165,16 @@ view: hr_subdepartment {
     <html>
     <body>
     <P style="color:White;background-color:#3D99AD  ;font-size: 15pt; margin:5px auto;text-align:left;padding-left: 30px;margin:0;">
-    Training</p>
-    <P style="color:black;background-color:#C4CCCE ;font-size: 15pt; margin:5px auto;text-align:left;padding-left: 30px;margin : 0">
+    <big>Training<big></p>
+    <P style="color:black;background-color:#8ac8d6 ;font-size: 15pt; margin:5px auto;text-align:left;padding-left: 30px;margin : 0">
 
-      <a href="https://thirdi.looker.com/dashboards/102?Year={{ _filters['hr_dates.yearvalue'] | url_encode }}" target="_blank" style="color:White">Overview   🢂</a>&emsp;&emsp;
+      <a href="https://thirdi.looker.com/dashboards/102?Year={{ _filters['hr_dates.yearvalue'] | url_encode }}" target="_blank" style="color:White;padding-bottom: 30px;padding-top: 18px;margin:5px auto;"><big>Overview  ➔</big></a>&emsp;&emsp;
 
-      <a href=" https://thirdi.looker.com/dashboards/110?Department={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year+={{ _filters['hr_dates.yearvalue'] | url_encode }}" target="_blank"style="color:White">Departments   🢂</a>&emsp;&emsp;
+      <a href=" https://thirdi.looker.com/dashboards/110?Department={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year+={{ _filters['hr_dates.yearvalue'] | url_encode }}" target="_blank"style="color:White"><big>Departments  ➔</big></a>&emsp;&emsp;
 
-      <a href=" https://thirdi.looker.com/dashboards/107" target="_blank" style="color:White">Historical   🢂</a>&emsp;&emsp;
+      <a href=" https://thirdi.looker.com/dashboards/107" target="_blank" style="color:White"><big>Historical  ➔</big></a>&emsp;&emsp;
 
-      <a href="https://thirdi.looker.com/dashboards/112?Department+={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year={{ _filters['hr_dates.yearvalue'] | url_encode }}&Month=Dec" target="_blank" style="color:White">Monthly Analysis   🢂</a>&emsp;&emsp;
+      <a href="https://thirdi.looker.com/dashboards/112?Department+={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year={{ _filters['hr_dates.yearvalue'] | url_encode }}&Month=Dec" target="_blank" style="color:White"><big>Monthly Analysis   ➔</big></a>&emsp;&emsp;
 
       </p>
       </body>
