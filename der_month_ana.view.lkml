@@ -56,7 +56,21 @@ view: der_month_ana {
   dimension: department {}
   dimension: department_id {}
   dimension: dol {}
-  dimension: employee_in_out {}
+
+ dimension: employee_in_out
+{
+    # type: string
+    # sql: CASE
+    #       WHEN hr_monthly_analysis.employee_in_out='Begining of Term Employee'
+    #       THEN 'Begining of Term EMP'
+    #       WHEN hr_monthly_analysis.employee_in_out='Number of New Employee'
+    #       THEN 'No. of New EMP'
+    #       WHEN hr_monthly_analysis.employee_in_out='Number of Leavers'
+    #       THEN 'No. of Leavers'
+    #       END
+    # ;;
+  }
+
   dimension: employee_name {}
   dimension: employee_name__ {}
   dimension: employee_type {}

@@ -47,7 +47,7 @@ view: hr_employee {
 
   dimension: employee_type {
     type: string
-    sql: ${TABLE}.EMPLOYEE_TYPE ;;
+    sql: ${TABLE}.EMPLOYEE_TYPE;;
   }
 
   # dimension: employee_type_1 {

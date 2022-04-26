@@ -63,7 +63,27 @@ view: hr_subdepartment {
 
   dimension: subdepartment_name {
     type: string
-    sql: ${TABLE}.SUBDEPARTMENT_NAME ;;
+    #sql:  ${TABLE}.SUBDEPARTMENT_NAME
+    sql: case when ${TABLE}.SUBDEPARTMENT_NAME = 'Database Administrator' then 'DBA Admin'
+    when ${TABLE}.SUBDEPARTMENT_NAME = 'Network Engineer' then 'N/w Engg'
+    when ${TABLE}.SUBDEPARTMENT_NAME = 'Sr Network Engineer' then 'Sr N/w Engg.'
+    when ${TABLE}.SUBDEPARTMENT_NAME = 'Senior BI Developer' then 'Sr BI Developer'
+    when ${TABLE}.SUBDEPARTMENT_NAME = 'Administrative Assistant' then 'Admin Assistant'
+    when ${TABLE}.SUBDEPARTMENT_NAME = 'Shared Services Manager' then 'Shared Services Mngr.'
+    when ${TABLE}.SUBDEPARTMENT_NAME = 'Sr. Accountant' then 'Sr Acct.'
+    when ${TABLE}.SUBDEPARTMENT_NAME = 'Accountant I' then 'Acct. I'
+    when ${TABLE}.SUBDEPARTMENT_NAME = 'Production Technician I' then 'Prod. Techn. I'
+    when ${TABLE}.SUBDEPARTMENT_NAME = 'Production Technician II' then 'Prod. Techn. II'
+    when ${TABLE}.SUBDEPARTMENT_NAME = 'Production Manager' then 'Prod. Mngr.'
+    when ${TABLE}.SUBDEPARTMENT_NAME = 'Area Sales Manager' then 'Area Sales Mngr.'
+    when ${TABLE}.SUBDEPARTMENT_NAME = 'Sales Manager' then 'Sales Mngr.'
+    when ${TABLE}.SUBDEPARTMENT_NAME = 'Software Engineer' then 'S/w Engg.'
+    when ${TABLE}.SUBDEPARTMENT_NAME = 'Software Engineer Manager' then 'S/w Engg. Mngr.'
+    when ${TABLE}.SUBDEPARTMENT_NAME = 'Senior Software Engineer' then 'Sr S/w Engg.'
+    else ${TABLE}.SUBDEPARTMENT_NAME
+    end
+
+    ;;
 
   }
 
@@ -72,14 +92,15 @@ view: hr_subdepartment {
     drill_fields: [department_name, subdepartment_name]
   }
 
-  dimension: htmlcode {
+  dimension: htmlcode
+  {
     sql: 1 ;;
     html:
     <html>
     <body>
     <P style="color:White;background-color:#3D99AD  ;font-size: 15pt; margin:5px auto;text-align:left;padding-left: 30px;margin:0;">
       Departments</p>
-      <P style="color:black;background-color:#C4CCCE ;font-size: 15pt; margin:5px auto;text-align:left;padding-left: 30px;margin : 0">
+      <P style="color:black;background-color:#8ac8d6 ;font-size: 15pt; margin:5px auto;text-align:left;padding-left: 30px;margin : 0">
 
       <a href="https://thirdi.looker.com/dashboards/102?Year={{ _filters['hr_dates.yearvalue'] | url_encode }}" target="_blank" style="color:White">Overview   🢂</a>&emsp;&emsp;
 
@@ -95,14 +116,15 @@ view: hr_subdepartment {
       ;;
   }
 
-  dimension: htmlcode1 {
+  dimension: htmlcode1
+  {
     sql: 1 ;;
     html:
     <html>
     <body>
     <P style="color:White;background-color:#3D99AD  ;font-size: 15pt; margin:5px auto;text-align:left;padding-left: 30px;margin:0;">
     Overview</p>
-    <P style="color:black;background-color:#C4CCCE ;font-size: 15pt; margin:5px auto;text-align:left;padding-left: 30px;margin : 0">
+    <P style="color:black;background-color:#8ac8d6 ;font-size: 15pt; margin:5px auto;text-align:left;padding-left: 30px;margin : 0">
 
       <a href=" https://thirdi.looker.com/dashboards/110?Department={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year+={{ _filters['hr_dates.yearvalue'] | url_encode }}" target="_blank"style="color:White">Department   🢂</a>&emsp;&emsp;
 
@@ -117,14 +139,15 @@ view: hr_subdepartment {
       </html>;;
   }
 
-  dimension: htmlcode2 {
+  dimension: htmlcode2
+  {
     sql: 1 ;;
     html:
     <html>
     <body>
     <P style="color:White;background-color:#3D99AD  ;font-size: 15pt; margin:5px auto;text-align:left;padding-left: 30px;margin:0;">
     Historical</p>
-    <P style="color:black;background-color:#C4CCCE ;font-size: 15pt; margin:5px auto;text-align:left;padding-left: 30px;margin : 0">
+    <P style="color:black;background-color:#8ac8d6 ;font-size: 15pt; margin:5px auto;text-align:left;padding-left: 30px;margin : 0">
 
       <a href="https://thirdi.looker.com/dashboards/102?Year={{ _filters['hr_dates.yearvalue'] | url_encode }}" target="_blank" style="color:White">Overview   🢂</a>&emsp;&emsp;
 
@@ -138,14 +161,16 @@ view: hr_subdepartment {
       </body>
       </html>;;
   }
-  dimension: htmlcode3 {
+
+  dimension: htmlcode3
+  {
     sql: 1 ;;
     html:
     <html>
     <body>
     <P style="color:White;background-color:#3D99AD  ;font-size: 15pt; margin:5px auto;text-align:left;padding-left: 30px;margin:0;">
     Monthly analysis</p>
-    <P style="color:black;background-color:#C4CCCE ;font-size: 15pt; margin:5px auto;text-align:left;padding-left: 30px;margin : 0">
+    <P style="color:black;background-color:#8ac8d6 ;font-size: 15pt; margin:5px auto;text-align:left;padding-left: 30px;margin : 0">
 
       <a href="https://thirdi.looker.com/dashboards/102?Year={{ _filters['hr_dates.yearvalue'] | url_encode }}" target="_blank" style="color:White">Overview   🢂</a>&emsp;&emsp;
 
@@ -159,7 +184,9 @@ view: hr_subdepartment {
       </body>
       </html>;;
   }
-  dimension: htmlcode4 {
+
+  dimension: htmlcode4
+  {
     sql: 1 ;;
     html:
     <html>
