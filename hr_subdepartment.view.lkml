@@ -122,17 +122,17 @@ view: hr_subdepartment {
     html:
     <html>
     <body>
-    <P style="color:White;background-color:#4A6DE5  ;font-size: 15pt; margin:5px auto;text-align:left;padding-left: 30px;margin:0;">
+    <P style="color:White;background-color:#4A6DE5  ;font-size: 15pt; margin:5px auto;text-align:left;padding-left: 30px;margin:0;border-radius: 10px;">
    <big> Overview </big></p>
-    <P style="color:black;background-color:#6A88F0 ;font-size: 12pt; margin:5px auto;text-align:left;padding-left: 30px;margin : 0">
+    <P style="color:black;background-color:#6A88F0 ;font-size: 12pt; margin:5px auto;text-align:left;padding-left: 30px;margin : 0;border-radius: 10px;">
 
-      <a href=" https://thirdi.looker.com/dashboards/110?Department={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year+={{ _filters['hr_dates.yearvalue'] | url_encode }}" target="_blank"style="color:White"><big>Department   ➔</big></a>&emsp;&emsp;
+      <a href=" https://thirdi.looker.com/dashboards/110?Department={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year+={{ _filters['hr_dates.yearvalue'] | url_encode }}" style="color:White"><big>Department   </big></a>&emsp;&emsp;
 
-      <a href=" https://thirdi.looker.com/dashboards/107" target="_blank" style="color:White"><big>Historical   ➔</big></a>&emsp;&emsp;
+      <a href=" https://thirdi.looker.com/dashboards/107" target="_blank" style="color:White"><big>Historical  </big></a>&emsp;&emsp;
 
-      <a href="https://thirdi.looker.com/dashboards/112?Department+={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year={{ _filters['hr_dates.yearvalue'] | url_encode }}&Month=Dec" target="_blank" style="color:White"><big>Monthly Analysis   ➔</big></a>&emsp;&emsp;
+      <a href="https://thirdi.looker.com/dashboards/112?Department+={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year={{ _filters['hr_dates.yearvalue'] | url_encode }}&Month=Dec" style="color:White"><big>Monthly Analysis   </big></a>&emsp;&emsp;
 
-      <a href="https://thirdi.looker.com/dashboards/103?Quarter=&Year={{ _filters['hr_dates.yearvalue'] | url_encode }}" target="_blank" style="color:White"><big>Training   ➔</big></a>
+      <a href="https://thirdi.looker.com/dashboards/103?Quarter=&Year={{ _filters['hr_dates.yearvalue'] | url_encode }}"  style="color:White"><big>Training   </big></a>
 
       </p>
       </body>
