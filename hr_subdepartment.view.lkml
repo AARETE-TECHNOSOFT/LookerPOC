@@ -124,7 +124,7 @@ view: hr_subdepartment {
     <body>
     <P style="color:White;background-color:#4A6DE5  ;font-size: 15pt; margin:5px auto;text-align:left;padding-left: 30px;margin:0;">
    <big> Overview </big></p>
-    <P style="color:black;background-color:#6A88F0 ;font-size: 15pt; margin:5px auto;text-align:left;padding-left: 30px;margin : 0">
+    <P style="color:black;background-color:#6A88F0 ;font-size: 12pt; margin:5px auto;text-align:left;padding-left: 30px;margin : 0">
 
       <a href=" https://thirdi.looker.com/dashboards/110?Department={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year+={{ _filters['hr_dates.yearvalue'] | url_encode }}" target="_blank"style="color:White"><big>Department   ➔</big></a>&emsp;&emsp;
 
