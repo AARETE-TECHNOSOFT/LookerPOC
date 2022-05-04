@@ -88,7 +88,10 @@ view: hr_training {
 
   dimension: traning_name {
     type: string
-    sql: ${TABLE}.TRANING_NAME ;;
+   # sql: ${TABLE}.TRANING_NAME ;;
+    sql: case when ${TABLE}.TRANING_NAME = 'Production Trianing 3' then 'Production Training 3'
+    else ${TABLE}.TRANING_NAME end ;;
+
   }
 
   dimension: year {
