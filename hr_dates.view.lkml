@@ -53,10 +53,10 @@ view: hr_dates {
   dimension: yearvalue {
     type:string
     sql:${TABLE}.YEARVALUE;;
-    html:
-     <a href="https://thirdi.looker.com/dashboards/110?Department=IT%2FIS&Year={{ _filters['hr_dates.yearvalue'] | url_encode }}">{{ value }}</a>
+    # html:
+    # <a href="https://thirdi.looker.com/dashboards/110?Department=IT%2FIS&Year={{ _filters['hr_dates.yearvalue'] | url_encode }}">{{ value }}</a>
 
-      ;;
+    #   ;;
   }
 
   dimension: previousyearvalue {
