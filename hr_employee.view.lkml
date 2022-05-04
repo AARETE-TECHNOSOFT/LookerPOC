@@ -233,6 +233,11 @@ view: hr_employee {
       sql: ${age}>45 AND ${age}<58 ;;
     }
 
+    dimension: MonYear {
+      type: string
+      sql: concat(${hr_dates.mon},${Year_Selector}) ;;
+    }
+
     measure: Avg_age_sen
     {
       type: count
@@ -369,18 +374,45 @@ view: hr_employee {
           END ;;
       value_format: "0.00%"
     }
-    measure: Turnover_Rate_LastYear_empid {
-      label_from_parameter: Year_Selector
-      type: number
-      sql:
+  measure: Turnover_Rate_LastYear_empid {
+    label_from_parameter: Year_Selector
+    type: number
+    sql:
           CASE
             WHEN {% parameter Year_Selector %} = '2016' THEN NULL
             WHEN {% parameter Year_Selector %} = '2017' THEN ${turnoverrate_2016_empid}
             WHEN {% parameter Year_Selector %} = '2018' THEN ${turnoverrate_2017_empid}
             ELSE NULL
           END ;;
-      value_format: "0.00"
-    }
+    value_format: "0.00"
+  }
+
+  # measure: Turnover_Rate_ThisYear_empid1 {
+  #   label_from_parameter: Year_Selector
+  #   type: number
+  #   sql:
+  #         CASE
+  #           WHEN hr_dates.yearvalue = '2016' THEN ${turnoverrate_2016_empid}
+  #           WHEN hr_dates.yearvalue = '2017' THEN ${turnoverrate_2017_empid}
+  #           WHEN hr_dates.yearvalue = '2018' THEN ${turnoverrate_2018_empid}
+  #           ELSE NULL
+  #         END ;;
+  #   value_format: "0.00%"
+  # }
+
+
+  # measure: Turnover_Rate_LastYear_empid1 {
+  #   label_from_parameter: Year_Selector
+  #   type: number
+  #   sql:
+  #         CASE
+  #           WHEN hr_dates.yearvalue = '2016' THEN NULL
+  #           WHEN hr_dates.yearvalue = '2017' THEN ${turnoverrate_2016_empid}
+  #           WHEN hr_dates.yearvalue = '2018' THEN ${turnoverrate_2017_empid}
+  #           ELSE NULL
+  #         END ;;
+  #   value_format: "0.00"
+  # }
 
     # measure: count_leaversColumn_2018 {
     #   type: count
