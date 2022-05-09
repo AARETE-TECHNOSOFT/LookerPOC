@@ -18,8 +18,8 @@ view: ga_dim_country {
     sql: ${TABLE}.COUNTRY ;;
   }
 
-  measure: count {
-    type: count
-    drill_fields: []
-  }
+  # measure: count {
+  #   type: count
+  #   drill_fields: []
+  # }
 }
