@@ -51,6 +51,7 @@ view: ga_game_experience {
     sql: ${TABLE}.CRASHES ;;
   }
 
+
   # Dates and timestamps can be represented in Looker using a dimension group of type: time.
   # Looker converts dates and timestamps to the specified timeframes within the dimension group.
 
@@ -123,9 +124,18 @@ view: ga_game_experience {
     type: number
     sql: ${TABLE}.WIN_PERCENTAGE ;;
   }
+  # dimension: Row_no {
+  #   primary_key: yes
+  #   type: number
+  #   sql:  row_number() over(order by ${date__date}  ) ;;
+  # }
 
   measure: count {
     type: count
     drill_fields: []
+  }
+  measure: Crashes_TM {
+    type: average
+    sql: ${TABLE}.CRASHES ;;
   }
 }

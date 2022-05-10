@@ -35,9 +35,10 @@ view: ga_predictions {
   # measures for this dimension, but you can also add measures of many different aggregates.
   # Click on the type parameter to see all the options in the Quick Help panel on the right.
 
-  measure: total_profit {
+  measure: Sum_profit {
     type: sum
     sql: ${profit} ;;
+    value_format: "$0.0,,\" M\""
   }
 
   measure: average_profit {
@@ -60,9 +61,42 @@ view: ga_predictions {
     type: number
     sql: ${TABLE}.REVENUE ;;
   }
+  measure: AVG_Rentenion_Rate {
+    type: average
+    sql: ${TABLE}.RETENTION_RATE ;;
+    value_format: "0.0\%"
+    html:
+    <p>
+    <img src="https://img.icons8.com/ultraviolet/40/000000/add-user-male.png" width="30" height="30"/>&nbsp;{{rendered_value}}</p>
+    ;;
+  }
+
+  measure: Sum_Revenue {
+    type: sum
+    sql: ${TABLE}.REVENUE ;;
+    value_format: "$0.0,,\" M\""
+  }
 
   measure: count {
     type: count
     drill_fields: []
+  }
+  measure: CAGR_AVG {
+    type: average
+    sql: ${TABLE}.CAGR  ;;
+    value_format: "0.0\%"
+  }
+  measure: Sum_newusers {
+    type: sum
+    sql:  ${TABLE}.NEW_USERS ;;
+    value_format: "0.0,\" K\""
+  }
+  measure: AVG_Churn_Rate {
+    type: average
+    sql: ${TABLE}.CHURN_RATE  ;;
+    value_format: "0.0%"
+    html: <p style="font-size:30px;display: inline-block;">
+    <img src="https://img.icons8.com/ultraviolet/40/000000/combo-chart.png" width="30" height="30" margin-bottom="40" />&nbsp;{{rendered_value}}</p>
+    ;;
   }
 }
