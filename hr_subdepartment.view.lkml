@@ -16,15 +16,15 @@ view: hr_subdepartment {
     type: string
     sql: ${TABLE}.DEPARTMENT_NAME ;;
     # html:
-    # <a href="https://thirdi.looker.com/dashboards/110?Department={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year+=2016" target="_blank">{{ value }}</a>
+    # <a href="https://thirdi.looker.com/embed/dashboards/110?Department={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year+=2016" target="_blank">{{ value }}</a>
 
     #   ;;
 
 
     #   link: {
     #     label: "subdepartment Name"
-    #     #url: "https://thirdi.looker.com/dashboards/110?&Department={{ _filters[‘hr_subdepartment.department_name’] | url_encode }}&Date={{ _filters['orders.date'] | url_encode }}&Year+=2016"
-    #     url: "https://thirdi.looker.com/dashboards/110?Department={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year+=2016"
+    #     #url: "https://thirdi.looker.com/embed/dashboards/110?&Department={{ _filters[‘hr_subdepartment.department_name’] | url_encode }}&Date={{ _filters['orders.date'] | url_encode }}&Year+=2016"
+    #     url: "https://thirdi.looker.com/embed/dashboards/110?Department={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year+=2016"
 
     # }
   }
@@ -32,7 +32,7 @@ view: hr_subdepartment {
     type: string
     sql: ${TABLE}.DEPARTMENT_NAME ;;
     html:
-      <a href="https://thirdi.looker.com/dashboards/112?Department+={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year={{ _filters['hr_dates.yearvalue'] | url_encode }}&Month=Dec" target="_blank">{{ value }}</a>
+      <a href="https://thirdi.looker.com/embed/dashboards/112?Department+={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year={{ _filters['hr_dates.yearvalue'] | url_encode }}&Month=Dec" target="_blank">{{ value }}</a>
       ;;
   }
 
@@ -102,13 +102,13 @@ view: hr_subdepartment {
      <big> Department </big></p>
       <P style="color:black;background-color:#6A88F0  ;font-size: 10pt; margin:5px auto;text-align:left;padding-left: 30px;margin :0;border-radius: 10px;">
 
-      <a href="https://thirdi.looker.com/dashboards/102?Year={{ _filters['hr_dates.yearvalue'] | url_encode }}"  style="color:White"><big>Overview </big></a>&emsp;&emsp;
+      <a href="https://thirdi.looker.com/embed/dashboards/102?Year={{ _filters['hr_dates.yearvalue'] | url_encode }}"  style="color:White"><big>Overview </big></a>&emsp;&emsp;
 
-      <a href=" https://thirdi.looker.com/dashboards/107"  style="color:White"><big>Historical   </big></a>&emsp;&emsp;
+      <a href=" https://thirdi.looker.com/embed/dashboards/107"  style="color:White"><big>Historical   </big></a>&emsp;&emsp;
 
-      <a href="https://thirdi.looker.com/dashboards/112?Department+={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year={{ _filters['hr_dates.yearvalue'] | url_encode }}&Month=Dec"  style="color:White"><big>Monthly Analysis  </big></a>&emsp;&emsp;
+      <a href="https://thirdi.looker.com/embed/dashboards/112?Department+={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year={{ _filters['hr_dates.yearvalue'] | url_encode }}&Month=Dec"  style="color:White"><big>Monthly Analysis  </big></a>&emsp;&emsp;
 
-      <a href="https://thirdi.looker.com/dashboards/103?Quarter=&Year={{ _filters['hr_dates.yearvalue'] | url_encode }}"  style="color:White"> <big>Training  </big></a>
+      <a href="https://thirdi.looker.com/embed/dashboards/103?Quarter=&Year={{ _filters['hr_dates.yearvalue'] | url_encode }}"  style="color:White"> <big>Training  </big></a>
 
       </p>
       </body>
@@ -127,13 +127,13 @@ view: hr_subdepartment {
    <big> Overview </big>
     <P style="color:black;background-color:#6A88F0 ;font-size: 10pt; margin:5px auto;text-align:left;padding-left: 30px;margin:0;border-radius: 10px;">
 
-      <a href=" https://thirdi.looker.com/dashboards/110?Department={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year+={{ _filters['hr_dates.yearvalue'] | url_encode }}" style="color:White"><big>Department   </big></a>&emsp;&emsp;
+      <a href=" https://thirdi.looker.com/embed/dashboards/110?Department={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year+={{ _filters['hr_dates.yearvalue'] | url_encode }}" style="color:White"><big>Department   </big></a>&emsp;&emsp;
 
-      <a href=" https://thirdi.looker.com/dashboards/107"  style="color:White"><big>Historical  </big></a>&emsp;&emsp;
+      <a href=" https://thirdi.looker.com/embed/dashboards/107"  style="color:White"><big>Historical  </big></a>&emsp;&emsp;
 
-      <a href="https://thirdi.looker.com/dashboards/112?Department+={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year={{ _filters['hr_dates.yearvalue'] | url_encode }}&Month=Dec" style="color:White"><big>Monthly Analysis   </big></a>&emsp;&emsp;
+      <a href="https://thirdi.looker.com/embed/dashboards/112?Department+={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year={{ _filters['hr_dates.yearvalue'] | url_encode }}&Month=Dec" style="color:White"><big>Monthly Analysis   </big></a>&emsp;&emsp;
 
-      <a href="https://thirdi.looker.com/dashboards/103?Quarter=&Year={{ _filters['hr_dates.yearvalue'] | url_encode }}"  style="color:White"><big>Training   </big></a>
+      <a href="https://thirdi.looker.com/embed/dashboards/103?Quarter=&Year={{ _filters['hr_dates.yearvalue'] | url_encode }}"  style="color:White"><big>Training   </big></a>
 
       </p>
       </body>
@@ -150,13 +150,13 @@ view: hr_subdepartment {
     <big>Historical</big></p>
     <P style="color:black;background-color:#6A88F0 ;font-size: 10pt; margin:5px auto;text-align:left;padding-left: 30px;margin : 0;border-radius: 10px;">
 
-      <a href="https://thirdi.looker.com/dashboards/102?Year={{ _filters['hr_dates.yearvalue'] | url_encode }}"  style="color:White"><big>Overview </big></a>&emsp;&emsp;
+      <a href="https://thirdi.looker.com/embed/dashboards/102?Year={{ _filters['hr_dates.yearvalue'] | url_encode }}"  style="color:White"><big>Overview </big></a>&emsp;&emsp;
 
-      <a href=" https://thirdi.looker.com/dashboards/110?Department={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year+={{ _filters['hr_dates.yearvalue'] | url_encode }}" style="color:White"><big>Department  </big></a>&emsp;&emsp;
+      <a href=" https://thirdi.looker.com/embed/dashboards/110?Department={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year+={{ _filters['hr_dates.yearvalue'] | url_encode }}" style="color:White"><big>Department  </big></a>&emsp;&emsp;
 
-      <a href="https://thirdi.looker.com/dashboards/112?Department+={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year={{ _filters['hr_dates.yearvalue'] | url_encode }}&Month=Dec" style="color:White"><big>Monthly Analysis </big></a>&emsp;&emsp;
+      <a href="https://thirdi.looker.com/embed/dashboards/112?Department+={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year={{ _filters['hr_dates.yearvalue'] | url_encode }}&Month=Dec" style="color:White"><big>Monthly Analysis </big></a>&emsp;&emsp;
 
-      <a href="https://thirdi.looker.com/dashboards/103?Quarter=&Year={{ _filters['hr_dates.yearvalue'] | url_encode }}"  style="color:White"><big>Training  </big></a>
+      <a href="https://thirdi.looker.com/embed/dashboards/103?Quarter=&Year={{ _filters['hr_dates.yearvalue'] | url_encode }}"  style="color:White"><big>Training  </big></a>
 
       </p>
       </body>
@@ -173,13 +173,13 @@ view: hr_subdepartment {
     <big>Monthly Analysis </big></p>
     <P style="color:black;background-color:#6A88F0 ;font-size: 10pt; margin:5px auto;text-align:left;padding-left: 30px;margin :0;border-radius: 10px;">
 
-      <a href="https://thirdi.looker.com/dashboards/102?Year={{ _filters['hr_dates.yearvalue'] | url_encode }}"  style="color:White"><big>Overview </big></a>&emsp;&emsp;
+      <a href="https://thirdi.looker.com/embed/dashboards/102?Year={{ _filters['hr_dates.yearvalue'] | url_encode }}"  style="color:White"><big>Overview </big></a>&emsp;&emsp;
 
-      <a href=" https://thirdi.looker.com/dashboards/110?Department={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year+={{ _filters['hr_dates.yearvalue'] | url_encode }}" style="color:White"><big>Department </big></a>&emsp;&emsp;
+      <a href=" https://thirdi.looker.com/embed/dashboards/110?Department={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year+={{ _filters['hr_dates.yearvalue'] | url_encode }}" style="color:White"><big>Department </big></a>&emsp;&emsp;
 
-      <a href=" https://thirdi.looker.com/dashboards/107"  style="color:White"><big>Historical  </big></a>&emsp;&emsp;
+      <a href=" https://thirdi.looker.com/embed/dashboards/107"  style="color:White"><big>Historical  </big></a>&emsp;&emsp;
 
-      <a href="https://thirdi.looker.com/dashboards/103?Quarter=&Year={{ _filters['hr_dates.yearvalue'] | url_encode }}"  style="color:White"><big>Training  </big></a>
+      <a href="https://thirdi.looker.com/embed/dashboards/103?Quarter=&Year={{ _filters['hr_dates.yearvalue'] | url_encode }}"  style="color:White"><big>Training  </big></a>
 
       </p>
       </body>
@@ -196,13 +196,13 @@ view: hr_subdepartment {
     <big>Training<big></p>
     <P style="color:black;background-color:#6A88F0 ;font-size: 10pt; margin:5px auto;text-align:left;padding-left: 30px;margin : 0;border-radius: 10px;">
 
-      <a href="https://thirdi.looker.com/dashboards/102?Year={{ _filters['hr_dates.yearvalue'] | url_encode }}" style="color:White;padding-bottom: 30px;padding-top: 18px;margin:5px auto;"><big>Overview </big></a>&emsp;&emsp;
+      <a href="https://thirdi.looker.com/embed/dashboards/102?Year={{ _filters['hr_dates.yearvalue'] | url_encode }}" style="color:White;padding-bottom: 30px;padding-top: 18px;margin:5px auto;"><big>Overview </big></a>&emsp;&emsp;
 
-      <a href=" https://thirdi.looker.com/dashboards/110?Department={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year+={{ _filters['hr_dates.yearvalue'] | url_encode }}" style="color:White"><big>Department </big></a>&emsp;&emsp;
+      <a href=" https://thirdi.looker.com/embed/dashboards/110?Department={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year+={{ _filters['hr_dates.yearvalue'] | url_encode }}" style="color:White"><big>Department </big></a>&emsp;&emsp;
 
-      <a href=" https://thirdi.looker.com/dashboards/107" style="color:White"><big>Historical </big></a>&emsp;&emsp;
+      <a href=" https://thirdi.looker.com/embed/dashboards/107" style="color:White"><big>Historical </big></a>&emsp;&emsp;
 
-      <a href="https://thirdi.looker.com/dashboards/112?Department+={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year={{ _filters['hr_dates.yearvalue'] | url_encode }}&Month=Dec"  style="color:White"><big>Monthly Analysis  </big></a>&emsp;&emsp;
+      <a href="https://thirdi.looker.com/embed/dashboards/112?Department+={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year={{ _filters['hr_dates.yearvalue'] | url_encode }}&Month=Dec"  style="color:White"><big>Monthly Analysis  </big></a>&emsp;&emsp;
 
       </p>
       </body>
