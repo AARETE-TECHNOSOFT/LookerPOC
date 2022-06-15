@@ -77,15 +77,15 @@ view: provider_overview_fd {
 
   dimension: Provider {
     type: string
-    #sql: ${TABLE}.GROUPNAME ;;
-     sql:{% if _user_attributes['shubhangi_test_user']  == 'yes' %}
-      ${TABLE}.GROUPNAME
-    {% else %}
-      '[REDACTED]'
-    {% endif %}   ;;
-    # html:
-    # <p style="font-size:23px;">{{rendered_value}}</p>
-    # ;;
+    sql: ${TABLE}.GROUPNAME ;;
+    # sql:{% if _user_attributes['shubhangi_test_user']  == 'yes' %}
+    #   ${TABLE}.GROUPNAME
+    # {% else %}
+    #   '[REDACTED]'
+    # {% endif %}   ;;
+    html:
+    <p style="font-size:23px;">{{rendered_value}}</p>
+    ;;
    # required_access_grants: [shubhangi_test_user]
 
   }
