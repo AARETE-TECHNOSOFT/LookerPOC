@@ -81,7 +81,7 @@ view: provider_overview_fd {
     sql:{% if _user_attributes['shubhangi_test_user']  == 'Empire City Laboratories Inc' %}
       ${TABLE}.GROUPNAME
     {% else %}
-      '[REDACTED]'
+      'Promesa Inc'
     {% endif %}   ;;
     html:
     <p style="font-size:23px;">{{rendered_value}}</p>
