@@ -11,10 +11,10 @@ include: "/**/*.dashboard"
 label: "Fidelis_Care"
 explore: data_fidelis_
 {
-#   access_filter: {
-#   field: provider_overview_fd.Provider
-#   user_attribute: shubhangi_test_user
-# }
+  access_filter: {
+  field: provider_overview_fd.Provider
+  user_attribute: shubhangi_test_user
+}
   #label: "@{Static_Type_measure} data_fidelis"
 
   join: provider_overview_fd
