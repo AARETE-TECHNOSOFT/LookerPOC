@@ -12,6 +12,7 @@ view: ga_churn_rate_causes {
   # This dimension will be called "Churn Numbers" in Explore.
 
   dimension: churn_numbers {
+    primary_key: yes
     type: number
     sql: ${TABLE}.CHURN_NUMBERS ;;
   }
@@ -23,6 +24,7 @@ view: ga_churn_rate_causes {
   measure: total_churn_numbers {
     type: sum
     sql: ${churn_numbers} ;;
+    value_format: "0.0\%"
   }
 
   measure: average_churn_numbers {
@@ -73,4 +75,138 @@ view: ga_churn_rate_causes {
     type: count
     drill_fields: []
   }
+  measure: Total_Uninstalls {
+    type: sum
+    sql: ${churn_numbers} ;;
+    value_format: "0.0,\" K\""
+    html:
+    <p style="font-size:25px;">{{rendered_value}}</p>;;
+  }
+  measure: Uninstall_AM1 {
+    hidden: yes
+    type: sum
+    sql: ${churn_numbers} ;;
+    filters: [churn_rate_causes: "Abusive In-Game Messages"]
+    value_format: "0.0,\" K\""
+  }
+  measure: AM_Percent_Total1 {
+    type: number
+    sql: case when ${Uninstall_AM1}=0 then 0 else ${Uninstall_AM1}/${Total_Uninstalls} end ;;
+    value_format: "0.0%"
+    # html:
+    # <li style="color:#265780;">
+    # {{rendered_value}}
+    # </li>
+    # ;;
+  }
+  measure: Uninstall_AM2 {
+    hidden: yes
+    type: sum
+    sql: ${churn_numbers} ;;
+    filters: [churn_rate_causes: "High Latency"]
+    value_format: "0.0,\" K\""
+  }
+  measure: AM_Percent_Total2 {
+    type: number
+    sql: case when ${Uninstall_AM2}=0 then 0 else ${Uninstall_AM2}/${Total_Uninstalls} end ;;
+    value_format: "0.0%"
+  }
+
+  measure: Uninstall_AM3 {
+    hidden: yes
+    type: sum
+    sql: ${churn_numbers} ;;
+    filters: [churn_rate_causes: "Poor Gameplay Balance"]
+    value_format: "0.0,\" K\""
+  }
+  measure: AM_Percent_Total3 {
+    type: number
+    sql: case when ${Uninstall_AM3}=0 then 0 else ${Uninstall_AM3}/${Total_Uninstalls} end ;;
+    value_format: "0.0%"
+  }
+  measure: Uninstall_AM4 {
+    hidden: yes
+    type: sum
+    sql: ${churn_numbers} ;;
+    filters: [churn_rate_causes: "Exhaustive Updates"]
+    value_format: "0.0,\" K\""
+  }
+  measure: AM_Percent_Total4 {
+    type: number
+    sql: case when ${Uninstall_AM4}=0 then 0 else ${Uninstall_AM4}/${Total_Uninstalls} end ;;
+    value_format: "0.0%"
+  }
+  measure: Uninstall_AM5 {
+    hidden: yes
+    type: sum
+    sql: ${churn_numbers} ;;
+    filters: [churn_rate_causes: "Disengaging Tutorial"]
+    value_format: "0.0,\" K\""
+  }
+  measure: AM_Percent_Total5 {
+    type: number
+    sql: case when ${Uninstall_AM5}=0 then 0 else ${Uninstall_AM5}/${Total_Uninstalls} end ;;
+    value_format: "0.0%"
+  }
+  filter: month_filter {
+    type: string
+    #suggestions: ["01-02-2020"]
+    suggestions: ["2020-01","2020-02","2020-03","2020-04","2020-05","2020-06","2020-07","2020-08","2020-09","2020-10","2020-11","2020-12"]
+
+  }
+  measure: Uninstalls_selected_month {
+    type: sum
+    sql: case when {% condition month_filter %} ${date__month} {% endcondition %} then ${churn_numbers} end ;;
+   value_format: "0.0,\" K\""
+  }
+  measure: Uninstalls_last_month{
+    type: sum
+    sql: CASE WHEN {% condition month_filter %}  To_char(ADD_MONTHS(to_date(${date__date},'yyyy-mm-dd'),1),'yyyy-mm')
+      {% endcondition %} THEN ${churn_numbers} end ;;
+     value_format: "0.0,\" K\""
+  }
+  measure:Uninstalls_Growth{
+    type: number
+    sql: ((${Uninstalls_selected_month}-${Uninstalls_last_month})/nullif(${Uninstalls_last_month},0)) ;;
+    value_format: "0.0%"
+    }
+
+  measure:User_Engagement_Churn_Rate_Causes_tab{
+    sql: 1 ;;
+    html:
+    <html>
+    <body>
+      <table style="width:100%;height:50%;line-height: 1.5;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+
+      <tr>
+      <td style="text-align:center;width:200px;padding-top: 15px;">
+      <p >ABUSIVE IN-GAME MESSAGES<br style="line-height:1.5;"><b style="font-size:20px; ">{{ga_churn_rate_causes.AM_Percent_Total1._rendered_value}}</b>
+      </p>
+      </td>
+      <td style="text-align:center;width:200px;padding-top: 15px;">
+      <p >HIGH LATENCY<br style="line-height:1.5;"><b style="font-size:20px;">{{ga_churn_rate_causes.AM_Percent_Total2._rendered_value}}</b>
+      </p>
+      </td>
+     </tr>
+      <tr>
+      <td style="text-align:center;width:200px;padding-top: 15px;">
+      <p >POOR GAMEPLAY BALANCE<br style="line-height:1.5;"><b style="font-size:20px; ">{{ga_churn_rate_causes.AM_Percent_Total3._rendered_value}}</b>
+      </p>
+      </td>
+      <td style="text-align:center;width:200px;padding-top: 15px;">
+      <p >EXHAUSTIVE UPDATES<br style="line-height:1.5;"><b style="font-size:20px;">{{ga_churn_rate_causes.AM_Percent_Total4._rendered_value}}</b>
+      </p>
+      </td>
+      <tr>
+      <td style="text-align:center;width:200px;padding-top: 15px;">
+      <p >DISENGAGING TUTORIAL<br style="line-height:1.5;"><b style="font-size:20px;">{{ga_churn_rate_causes.AM_Percent_Total5._rendered_value}}</b>
+      </p>
+      </td>
+      </tr>
+      </table>
+      </body>
+      </html>
+      ;;
+  }
+
 }

@@ -14,6 +14,7 @@ view: ga_marketing {
   dimension: ad_clicks {
     type: number
     sql: ${TABLE}.AD_CLICKS ;;
+    primary_key: yes
   }
 
   dimension: ad_impressions {
@@ -78,4 +79,77 @@ view: ga_marketing {
     type: count
     drill_fields: []
   }
+
+  measure:VTI_TM{
+    type: sum
+    sql: ${TABLE}.VIEWS_TO_INSTALL ;;
+
+  }
+
+  measure: AD_Impressions_sum {
+    type: sum
+    sql:${TABLE}.AD_IMPRESSIONS ;;
+  }
+
+  measure: AD_Clicks_sum {
+    type: sum
+    sql:${TABLE}.AD_CLICKS ;;
+}
+
+  filter: month_filter1 {
+    type: date
+    #suggestions: ["01-02-2020"]
+    suggestions: ["2020-01","2020-02","2020-03","2020-04","2020-05","2020-06","2020-07","2020-08","2020-09","2020-10","2020-11","2020-12"]
+
+  }
+
+  dimension: Start_Date {
+    type: string
+    sql: '2020-01-01' ;;
+    }
+
+  measure: Last12month
+  {
+    type: average
+    sql:case when ${date__date}>= ${Start_Date} and to_date(${date__date},'yyyy-mm-dd')< {% date_end month_filter1 %} then 1 else 0 end  ;;
+  }
+
+  measure: AD_Impressions_Last12Months {
+    type: number
+    sql: case when ${Last12month}=1 then
+      sum(${TABLE}.AD_IMPRESSIONS ) else null end;;
+  }
+
+  measure: AD_Clicks_Last12Months {
+    type: number
+    sql: case when ${Last12month}=1 then
+      sum(${TABLE}.AD_CLICKS) else null end;;
+  }
+
+
+
+  filter: month_filter {
+    type: string
+    #suggestions: ["01-02-2020"]
+    suggestions: ["2020-01","2020-02","2020-03","2020-04","2020-05","2020-06","2020-07","2020-08","2020-09","2020-10","2020-11","2020-12"]
+
+  }
+
+  measure: VTI_selected_month {
+    type: sum
+    sql: case when {% condition month_filter %} ${date__month} {% endcondition %} then ${TABLE}.VIEWS_TO_INSTALL end ;;
+  }
+
+  measure: VTI_LM_pr {
+    type: sum
+    sql: CASE WHEN {% condition month_filter %}  To_char(ADD_MONTHS(to_date(${date__date},'yyyy-mm-dd'),1),'yyyy-mm')
+      {% endcondition %} THEN ${TABLE}.VIEWS_TO_INSTALL end ;;
+  }
+
+  measure: VTI_Growth{
+    type: number
+    sql: ((${VTI_selected_month}-${VTI_LM_pr})/nullif(${VTI_LM_pr},0));;
+    value_format: "0.0%"
+  }
+
 }

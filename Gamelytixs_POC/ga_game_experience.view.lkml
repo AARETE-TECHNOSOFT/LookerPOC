@@ -137,5 +137,6 @@ view: ga_game_experience {
   measure: Crashes_TM {
     type: average
     sql: ${TABLE}.CRASHES ;;
+
   }
 }

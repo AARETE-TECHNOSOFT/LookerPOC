@@ -39,6 +39,10 @@ view: ga_predictions {
     type: sum
     sql: ${profit} ;;
     value_format: "$0.0,,\" M\""
+    html:
+    <p style="font-size:25px;display: inline-block;">
+    <img src="https://img.icons8.com/ultraviolet/40/000000/refresh--v1.png" width="30" height="35" style="padding-bottom:5px;" style="padding-bottom:8px;"/>&nbsp;{{rendered_value}}</p>
+    ;;
   }
 
   measure: average_profit {
@@ -50,6 +54,7 @@ view: ga_predictions {
     primary_key: yes
     type: string
     sql: ${TABLE}.QUARTER ;;
+
   }
 
   dimension: retention_rate {
@@ -66,8 +71,8 @@ view: ga_predictions {
     sql: ${TABLE}.RETENTION_RATE ;;
     value_format: "0.0\%"
     html:
-    <p>
-    <img src="https://img.icons8.com/ultraviolet/40/000000/add-user-male.png" width="30" height="30"/>&nbsp;{{rendered_value}}</p>
+    <p style="font-size:25px;display: inline-block;">
+    <img src="https://img.icons8.com/ultraviolet/40/000000/add-user-male.png" width="30" height="35" style="padding-bottom:8px;"/>&nbsp;{{rendered_value}}</p>
     ;;
   }
 
@@ -75,6 +80,9 @@ view: ga_predictions {
     type: sum
     sql: ${TABLE}.REVENUE ;;
     value_format: "$0.0,,\" M\""
+    html: <p style="font-size:25px;display: inline-block;">
+   <img src="https://img.icons8.com/ultraviolet/40/000000/database-restore.png" width="30" height="35" margin-bottom="40" style="padding-bottom:8px;" />&nbsp;{{rendered_value}}</p>
+    ;;
   }
 
   measure: count {
@@ -90,13 +98,16 @@ view: ga_predictions {
     type: sum
     sql:  ${TABLE}.NEW_USERS ;;
     value_format: "0.0,\" K\""
+    html: <p style="font-size:25px;display: inline-block;">
+    <img src="https://img.icons8.com/ultraviolet/40/000000/conference.png" width="30" height="35" margin-bottom="40" style="padding-bottom:8px;"/>&nbsp;{{rendered_value}}</p>
+    ;;
   }
   measure: AVG_Churn_Rate {
     type: average
     sql: ${TABLE}.CHURN_RATE  ;;
     value_format: "0.0%"
-    html: <p style="font-size:30px;display: inline-block;">
-    <img src="https://img.icons8.com/ultraviolet/40/000000/combo-chart.png" width="30" height="30" margin-bottom="40" />&nbsp;{{rendered_value}}</p>
+    html: <p style="font-size:25px;display: inline-block;">
+    <img src="https://img.icons8.com/ultraviolet/40/000000/combo-chart.png" width="30" height="35" margin-bottom="40" style="padding-bottom:8px;" />&nbsp;{{rendered_value}}</p>
     ;;
   }
 }

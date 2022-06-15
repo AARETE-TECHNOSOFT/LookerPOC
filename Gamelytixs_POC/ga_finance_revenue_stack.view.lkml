@@ -35,6 +35,10 @@ view: ga_finance_revenue_stack {
     sql: ${TABLE}.DATE_ ;;
   }
 
+  dimension: Previous_month {
+    type: date
+    sql: to_date( add_months(to_date(${date__date},'rr-mm-dd'),-1),'rr-mm-dd')  ;;
+  }
   dimension: game {
     type: string
     sql: ${TABLE}.GAME ;;

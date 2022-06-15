@@ -133,14 +133,16 @@ view: ga_marketing_br_adv_analysis {
     type: count
     drill_fields: []
   }
-  # measure: YT_Reach_TM {
-  #   type: sum_distinct
-  #   sql: ${TABLE}.YOUTUBE_REACH ;;
-  #   value_format: "0.0,\" K\""
-  # }
+  measure: YT_Reach_TM {
+    type: sum
+    sql: ${youtube_reach} ;;
+    value_format: "0.0,\" K\""
+  }
   # measure: Insta_Reach_TM {
   #   type: sum
   #   sql:  ${TABLE}.INSTAGRAM_REACH ;;
   #   value_format: "0.0,\" K\""
   # }
+
+
 }
