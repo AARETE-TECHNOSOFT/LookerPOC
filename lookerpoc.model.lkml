@@ -4,10 +4,17 @@ connection: "test_oracle"
 include: "*.view"
 include: "/views/*.view"
 include: "/**/*.dashboard"
-
+# access_grant: shubhangi_test_user {
+#   user_attribute: shubhangi_test_user
+#   allowed_values: [ "Empire City Laboratories Inc"]
+# }
 label: "Fidelis_Care"
 explore: data_fidelis_
 {
+#   access_filter: {
+#   field: provider_overview_fd.Provider
+#   user_attribute: shubhangi_test_user
+# }
   #label: "@{Static_Type_measure} data_fidelis"
 
   join: provider_overview_fd
@@ -19,7 +26,12 @@ explore: data_fidelis_
   join: dimdate_fid
   {
     type: left_outer
-    sql_on: ${data_fidelis_.dos_year_month}=${dimdate_fid.date_} ;;
+    sql_on: ${data_fidelis_.dos_year_mon_date}=${dimdate_fid.date_} ;;
+    relationship: many_to_one
+  }
+  join: dimdate_fd {
+    type: left_outer
+    sql_on: ${data_fidelis_.dos_year_mon_month}=${dimdate_fd.date_};;
     relationship: many_to_one
   }
 
@@ -30,6 +42,10 @@ explore: provider_derivetable {
     sql_on: ${data_fidelis_.prov_irs_num}=${provider_derivetable.prov_irs_num_tin} ;;
     relationship: many_to_one
   }
+
+}
+explore:  dimdate_fid
+{
 
 }
 explore: spend_breakout_fd {}

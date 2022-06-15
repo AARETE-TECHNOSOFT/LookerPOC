@@ -35,12 +35,15 @@ view: data_fidelis_ {
   dimension: cpt4_proc_desc {
     type: string
     sql: ${TABLE}.CPT4_PROC_DESC ;;
+
   }
 
   dimension: cxt_edit {
     label: "Initiative"
     type: string
     sql: ${TABLE}.CXT_EDIT ;;
+    drill_fields: [cxt_excd]
+
   }
 
   dimension: cxt_excd {
@@ -81,6 +84,15 @@ view: data_fidelis_ {
     type: number
     sql: ${TABLE}.DUMMY__SAVINGS ;;
   }
+  dimension: drill_field {
+    type: number
+    sql: dummy__savings ;;
+    drill_fields: [dummy__savings]
+    link: {
+      label: "scorecard"
+      url: "https://thirdi.looker.com/dashboards/109?Geography=&Sys%20Date%20Date=2022%2F01%2F12&drill_field={{ _filters['data_fidelis_.drill_field']}}"
+    }
+  }
 
   measure: sum_dummy_savings_HTML
   {
@@ -91,6 +103,7 @@ view: data_fidelis_ {
     html:
     <p style="font-size:20px;">{{rendered_value}} </p>
     ;;
+    #drill_fields: [dummy__savings]
   }
   measure: sum_dummy_savings
   {

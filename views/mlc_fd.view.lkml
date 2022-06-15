@@ -29,6 +29,8 @@ view: mlc_fd {
     type: sum
     sql: ${rates} ;;
     value_format: "0.00%"
+
+
   }
 
   measure: average_rates {
