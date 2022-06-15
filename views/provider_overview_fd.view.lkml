@@ -77,12 +77,12 @@ view: provider_overview_fd {
 
   dimension: Provider {
     type: string
-    sql: ${TABLE}.GROUPNAME ;;
-    # sql:{% if _user_attributes['shubhangi_test_user']  == 'yes' %}
-    #   ${TABLE}.GROUPNAME
-    # {% else %}
-    #   '[REDACTED]'
-    # {% endif %}   ;;
+    #sql: ${TABLE}.GROUPNAME ;;
+    sql:{% if _user_attributes['shubhangi_test_user']  == 'Empire City Laboratories Inc' %}
+      ${TABLE}.GROUPNAME
+    {% else %}
+      '[REDACTED]'
+    {% endif %}   ;;
     html:
     <p style="font-size:23px;">{{rendered_value}}</p>
     ;;
