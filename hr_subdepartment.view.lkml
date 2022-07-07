@@ -1,0 +1,214 @@
+# The name of this view in Looker is "Hr Subdepartment"
+
+view: hr_subdepartment {
+  # The sql_table_name parameter indicates the underlying database table
+  # to be used for all fields in this view.
+  sql_table_name: "C##LOOKER".HR_SUBDEPARTMENT
+    ;;
+  # No primary key is defined for this view. In order to join this view in an Explore,
+  # define primary_key: yes on a dimension that has no repeated values.
+
+  # Here's what a typical dimension looks like in LookML.
+  # A dimension is a groupable field that can be used to filter query results.
+  # This dimension will be called "Department Name" in Explore.
+
+  dimension: department_name {
+    type: string
+    sql: ${TABLE}.DEPARTMENT_NAME ;;
+    # html:
+    # <a href="https://thirdi.looker.com/embed/dashboards/110?Department={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year+=2016" target="_blank">{{ value }}</a>
+
+    #   ;;
+
+
+    #   link: {
+    #     label: "subdepartment Name"
+    #     #url: "https://thirdi.looker.com/embed/dashboards/110?&Department={{ _filters[‘hr_subdepartment.department_name’] | url_encode }}&Date={{ _filters['orders.date'] | url_encode }}&Year+=2016"
+    #     url: "https://thirdi.looker.com/embed/dashboards/110?Department={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year+=2016"
+
+    # }
+  }
+  dimension: dept {
+    type: string
+    sql: ${TABLE}.DEPARTMENT_NAME ;;
+    html:
+      <a href="https://thirdi.looker.com/embed/dashboards/112?Department+={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year={{ _filters['hr_dates.yearvalue'] | url_encode }}&Month=Dec" target="_blank">{{ value }}</a>
+      ;;
+  }
+
+  dimension: deptid {
+    type: number
+    value_format_name: id
+    sql: ${TABLE}.DEPTID ;;
+  }
+
+  dimension: subdepartment {
+    type: number
+    sql: ${TABLE}.SUBDEPARTMENT ;;
+  }
+
+  # A measure is a field that uses a SQL aggregate function. Here are defined sum and average
+  # measures for this dimension, but you can also add measures of many different aggregates.
+  # Click on the type parameter to see all the options in the Quick Help panel on the right.
+
+  measure: total_subdepartment {
+    type: sum
+    sql: ${subdepartment} ;;
+  }
+
+  measure: average_subdepartment {
+    type: average
+    sql: ${subdepartment} ;;
+  }
+
+  dimension: subdepartment_name {
+    type: string
+    #sql:  ${TABLE}.SUBDEPARTMENT_NAME
+    sql: case when ${TABLE}.SUBDEPARTMENT_NAME = 'Database Administrator' then 'DBA Admin'
+    when ${TABLE}.SUBDEPARTMENT_NAME = 'Network Engineer' then 'N/w Engg'
+    when ${TABLE}.SUBDEPARTMENT_NAME = 'Sr Network Engineer' then 'Sr N/w Engg.'
+    when ${TABLE}.SUBDEPARTMENT_NAME = 'Senior BI Developer' then 'Sr BI Developer'
+    when ${TABLE}.SUBDEPARTMENT_NAME = 'Administrative Assistant' then 'Admin Assistant'
+    when ${TABLE}.SUBDEPARTMENT_NAME = 'Shared Services Manager' then 'Shared Services Mngr.'
+    when ${TABLE}.SUBDEPARTMENT_NAME = 'Sr. Accountant' then 'Sr Acct.'
+    when ${TABLE}.SUBDEPARTMENT_NAME = 'Accountant I' then 'Acct. I'
+    when ${TABLE}.SUBDEPARTMENT_NAME = 'Production Technician I' then 'Prod. Techn. I'
+    when ${TABLE}.SUBDEPARTMENT_NAME = 'Production Technician II' then 'Prod. Techn. II'
+    when ${TABLE}.SUBDEPARTMENT_NAME = 'Production Manager' then 'Prod. Mngr.'
+    when ${TABLE}.SUBDEPARTMENT_NAME = 'Area Sales Manager' then 'Area Sales Mngr.'
+    when ${TABLE}.SUBDEPARTMENT_NAME = 'Sales Manager' then 'Sales Mngr.'
+    when ${TABLE}.SUBDEPARTMENT_NAME = 'Software Engineer' then 'S/w Engg.'
+    when ${TABLE}.SUBDEPARTMENT_NAME = 'Software Engineer Manager' then 'S/w Engg. Mngr.'
+    when ${TABLE}.SUBDEPARTMENT_NAME = 'Senior Software Engineer' then 'Sr S/w Engg.'
+    else ${TABLE}.SUBDEPARTMENT_NAME
+    end
+
+    ;;
+
+  }
+
+  measure: count {
+    type: count
+    drill_fields: [department_name, subdepartment_name]
+  }
+
+  dimension: htmlcode
+  {
+    sql: 1 ;;
+    html:
+    <html>
+    <body>
+    <P style="color:White;background-color:#4A6DE5  ;font-size: 15pt; margin:5px auto;text-align:left;padding-left: 30px;margin:0;border-radius: 10px;">
+     <big> Department </big></p>
+      <P style="color:black;background-color:#6A88F0  ;font-size: 10pt; margin:5px auto;text-align:left;padding-left: 30px;margin :0;border-radius: 10px;">
+
+      <a href="https://thirdi.looker.com/embed/dashboards/102?Year={{ _filters['hr_dates.yearvalue'] | url_encode }}"  style="color:White"><big>Overview </big></a>&emsp;&emsp;
+
+      <a href=" https://thirdi.looker.com/embed/dashboards/107"  style="color:White"><big>Historical   </big></a>&emsp;&emsp;
+
+      <a href="https://thirdi.looker.com/embed/dashboards/112?Department+={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year={{ _filters['hr_dates.yearvalue'] | url_encode }}&Month=Dec"  style="color:White"><big>Monthly Analysis  </big></a>&emsp;&emsp;
+
+      <a href="https://thirdi.looker.com/embed/dashboards/103?Quarter=&Year={{ _filters['hr_dates.yearvalue'] | url_encode }}"  style="color:White"> <big>Training  </big></a>
+
+      </p>
+      </body>
+      </html>
+      ;;
+  }
+
+  dimension: htmlcode1
+  {
+    sql: 1 ;;
+    html:
+    <html>
+    <body>
+
+    <P style="color:White;background-color:#4A6DE5  ;font-size: 15pt; margin:5px auto;text-align:left;padding-left: 30px;margin:0;border-radius: 10px;">
+   <big> Overview </big>
+    <P style="color:black;background-color:#6A88F0 ;font-size: 10pt; margin:5px auto;text-align:left;padding-left: 30px;margin:0;border-radius: 10px;">
+
+      <a href=" https://thirdi.looker.com/embed/dashboards/110?Department={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year+={{ _filters['hr_dates.yearvalue'] | url_encode }}" style="color:White"><big>Department   </big></a>&emsp;&emsp;
+
+      <a href=" https://thirdi.looker.com/embed/dashboards/107"  style="color:White"><big>Historical  </big></a>&emsp;&emsp;
+
+      <a href="https://thirdi.looker.com/embed/dashboards/112?Department+={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year={{ _filters['hr_dates.yearvalue'] | url_encode }}&Month=Dec" style="color:White"><big>Monthly Analysis   </big></a>&emsp;&emsp;
+
+      <a href="https://thirdi.looker.com/embed/dashboards/103?Quarter=&Year={{ _filters['hr_dates.yearvalue'] | url_encode }}"  style="color:White"><big>Training   </big></a>
+
+      </p>
+      </body>
+      </html>;;
+  }
+
+  dimension: htmlcode2
+  {
+    sql: 1 ;;
+    html:
+    <html>
+    <body>
+    <P style="color:White;background-color:#4A6DE5  ;font-size: 15pt; margin:5px auto;text-align:left;padding-left: 30px;margin:0;border-radius: 10px;">
+    <big>Historical</big></p>
+    <P style="color:black;background-color:#6A88F0 ;font-size: 10pt; margin:5px auto;text-align:left;padding-left: 30px;margin : 0;border-radius: 10px;">
+
+      <a href="https://thirdi.looker.com/embed/dashboards/102?Year={{ _filters['hr_dates.yearvalue'] | url_encode }}"  style="color:White"><big>Overview </big></a>&emsp;&emsp;
+
+      <a href=" https://thirdi.looker.com/embed/dashboards/110?Department={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year+={{ _filters['hr_dates.yearvalue'] | url_encode }}" style="color:White"><big>Department  </big></a>&emsp;&emsp;
+
+      <a href="https://thirdi.looker.com/embed/dashboards/112?Department+={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year={{ _filters['hr_dates.yearvalue'] | url_encode }}&Month=Dec" style="color:White"><big>Monthly Analysis </big></a>&emsp;&emsp;
+
+      <a href="https://thirdi.looker.com/embed/dashboards/103?Quarter=&Year={{ _filters['hr_dates.yearvalue'] | url_encode }}"  style="color:White"><big>Training  </big></a>
+
+      </p>
+      </body>
+      </html>;;
+  }
+
+  dimension: htmlcode3
+  {
+    sql: 1 ;;
+    html:
+    <html>
+    <body>
+    <P style="color:White;background-color:#4A6DE5  ;font-size: 15pt; margin:5px auto;text-align:left;padding-left: 30px;margin:0;border-radius: 10px;">
+    <big>Monthly Analysis </big></p>
+    <P style="color:black;background-color:#6A88F0 ;font-size: 10pt; margin:5px auto;text-align:left;padding-left: 30px;margin :0;border-radius: 10px;">
+
+      <a href="https://thirdi.looker.com/embed/dashboards/102?Year={{ _filters['hr_dates.yearvalue'] | url_encode }}"  style="color:White"><big>Overview </big></a>&emsp;&emsp;
+
+      <a href=" https://thirdi.looker.com/embed/dashboards/110?Department={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year+={{ _filters['hr_dates.yearvalue'] | url_encode }}" style="color:White"><big>Department </big></a>&emsp;&emsp;
+
+      <a href=" https://thirdi.looker.com/embed/dashboards/107"  style="color:White"><big>Historical  </big></a>&emsp;&emsp;
+
+      <a href="https://thirdi.looker.com/embed/dashboards/103?Quarter=&Year={{ _filters['hr_dates.yearvalue'] | url_encode }}"  style="color:White"><big>Training  </big></a>
+
+      </p>
+      </body>
+      </html>;;
+  }
+
+  dimension: htmlcode4
+  {
+    sql: 1 ;;
+    html:
+    <html>
+    <body>
+    <P style="color:White;background-color:#4A6DE5  ;font-size: 15pt; margin:5px auto;text-align:left;padding-left: 30px;margin:0;border-radius: 10px;">
+    <big>Training<big></p>
+    <P style="color:black;background-color:#6A88F0 ;font-size: 10pt; margin:5px auto;text-align:left;padding-left: 30px;margin : 0;border-radius: 10px;">
+
+      <a href="https://thirdi.looker.com/embed/dashboards/102?Year={{ _filters['hr_dates.yearvalue'] | url_encode }}" style="color:White;padding-bottom: 30px;padding-top: 18px;margin:5px auto;"><big>Overview </big></a>&emsp;&emsp;
+
+      <a href=" https://thirdi.looker.com/embed/dashboards/110?Department={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year+={{ _filters['hr_dates.yearvalue'] | url_encode }}" style="color:White"><big>Department </big></a>&emsp;&emsp;
+
+      <a href=" https://thirdi.looker.com/embed/dashboards/107" style="color:White"><big>Historical </big></a>&emsp;&emsp;
+
+      <a href="https://thirdi.looker.com/embed/dashboards/112?Department+={{ _filters['hr_subdepartment.department_name'] | url_encode }}&Year={{ _filters['hr_dates.yearvalue'] | url_encode }}&Month=Dec"  style="color:White"><big>Monthly Analysis  </big></a>&emsp;&emsp;
+
+      </p>
+      </body>
+      </html>;;
+  }
+
+
+
+}
