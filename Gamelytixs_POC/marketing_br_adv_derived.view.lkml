@@ -278,16 +278,19 @@ view: marketing_br_adv_derived {
   measure: K_Factor_Target {
     type: number
     sql: 0.60 ;;
+    value_format: "0.0%"
   }
 
   measure: Conversion_Rate_Target {
     type: number
     sql: 0.05 ;;
+    value_format: "0.0%"
   }
 
   measure: Retention_Rate_Target {
     type: number
     sql: 0.70;;
+    value_format: "0.0%"
   }
 
   measure: PlayStore_Ranking_TM {
@@ -453,13 +456,9 @@ view: marketing_br_adv_derived {
     <html>
     <body>
       <table style="width:100%;height:50%;line-height: 1.5;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
-      <tr style="line-height: 1.0;">
-      <td style="line-height: 1.0;">
-     <h1 style="color:black;background-color:#ffffff;font-size: 10pt; margin:10px auto;text-align:LEFT; padding-left: 20px;border-radius: 10px;">MARKETING &nbsp;<img src="https://img.icons8.com/office/16/000000/circled-right-2.png" width="15" height="15" margin-bottom="40" /></h1>
-      </td></tr>
       <tr>
       <td style="text-align:center;width:200px;">
-      <p >TOTAL REACH<br style="line-height:1.0;font-size: 10pt;"><b style="font-size:20px; ">{{marketing_br_adv_derived.Total_Reach_selectedMonth._rendered_value}}</b>
+      <p >TOTAL&ensp;REACH<br style="line-height:1.0;font-size: 10pt;"><b style="font-size:20px; ">{{marketing_br_adv_derived.Total_Reach_selectedMonth._rendered_value}}</b>
       </p>
       </td>
       <td style="text-align:center;width:200px;">
@@ -514,33 +513,46 @@ view: marketing_br_adv_derived {
        </td>
       </tr>
       </table>
-
-
-
       </body>
       </html>
       ;;
   }
 
-  measure:Marketing_BRAND_REACH_tab{
+
+  measure:Marketing_Brand_Reach_tab{
     sql: 1 ;;
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.0;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
-      <tr>
-      <td style="text-align:center;width:200px;padding-top: 15px;">
-      <p >BRAND REACH<br style="line-height:1.5;"><b style="font-size:20px; ">{{marketing_br_adv_derived.Total_Reach_selectedMonth._rendered_value}}</b>
+      <table style="width:100%;height:50%;line-height: 1.5;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+     <tr>
+      <td style="text-align:LEFT;width:200px;font-size: 13pt;">
+      <p style="font-size:10pt;">BRAND&ensp;REACH<br style="line-height:1.0;font-size:10px;"><b style="font-size:18px;">{{marketing_br_adv_derived.Total_Reach_selectedMonth._rendered_value}}</b>
       </p>
       </td>
-      <td style="text-align:center;width:200px;padding-top: 15px;">
-      <p ><br style="line-height:1.5;"><b style="font-size:20px;">{{marketing_br_adv_derived.YT_Reach_TM._rendered_value}}</b>
+      <td style="text-align:center;width:200px;font-size: 13pt;">
+      <p ><br style="line-height:1.0;">
+      <img src="https://img.icons8.com/color/48/000000/facebook-circled--v1.png" width="25" height="25"/>
       </p>
       </td>
-    </tr>
+       </td>
+      <td style="text-align:center;width:200px;font-size: 13pt;">
+      <p ><br style="line-height:1.0;">
+      <img src="https://img.icons8.com/color/48/000000/youtube-play.png" width="25" height="25"/>
+      </p>
+      </td>
+       </td>
+      <td style="text-align:center;width:200px;font-size: 13pt;">
+      <p ><br style="line-height:1.0;">
+      <img src="https://img.icons8.com/fluency/48/000000/instagram-new.png" width="25" height="25"/>
+      </p>
+      </td>
+       </td>
 
-      <tr style="line-height:1.5;">
-      <td style="text-align:center; line-height:1.0;width:200px;font-size:13px;">
+      </tr>
+
+      <tr>
+      <td style="text-align:LEFT; width:200px;font-size: 10pt;">
       <p>
       {% if marketing_br_adv_derived.TotalReach_Growth._value >= 0 %}
 
@@ -551,28 +563,32 @@ view: marketing_br_adv_derived {
       <font color="red"> ▼  {{ marketing_br_adv_derived.TotalReach_Growth._rendered_value }}</font>&nbsp; LM
 
       {% endif %}
-
       </p>
       </td>
-      <td style="text-align:center;width:200px;padding-top: 15px;">
-      <p ><br style="line-height:1.5;"><b style="font-size:20px;">{{marketing_br_adv_derived.Insta_Reach_TM._rendered_value}}</b>
+      <td style="text-align:center;width:200px;font-size: 10pt;">
+      <p >{{marketing_br_adv_derived.FBReach_selected_month._rendered_value}}
       </p>
       </td>
-      </tr>
-      <tr>
-      <td style="text-align:center;width:200px;padding-top: 15px;">
-      <p ><br style="line-height:1.5;"><b style="font-size:20px;">{{marketing_br_adv_derived.FB_Reach_TM._rendered_value}}</b>
+      </td>
+      <td style="text-align:center;width:200px;font-size: 10pt;">
+      <p >{{marketing_br_adv_derived.YTReach_selected_month._rendered_value}}
       </p>
       </td>
-</tr>
-
+      </td>
+      <td style="text-align:center;width:200px;font-size: 10pt;">
+      <p >{{marketing_br_adv_derived.InstaReach_selected_month._rendered_value}}
+      </p>
+      </td>
+      </td>
       </tr>
       </table>
-
       </body>
       </html>
       ;;
   }
+
+
+
 
 
 

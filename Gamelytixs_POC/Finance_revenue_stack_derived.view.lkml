@@ -154,7 +154,7 @@ view: finance_revenue_stack_derived {
 
   measure: Revenue_Growth{
     type: number
-    sql: ((${Revenue_selected_month}-${Revenue_LM_pr})/${Revenue_selected_month}) ;;
+    sql: ((${Revenue_selected_month}-${Revenue_LM_pr})/nullif(${Revenue_selected_month},0)) ;;
     value_format: "0.0%"
     # html:
     # <html>
@@ -185,7 +185,7 @@ view: finance_revenue_stack_derived {
 
   measure: Revenue_Growth_Advertisement{
     type: number
-    sql: ((${Revenue_selected_month_Advertisement}-${Revenue_LM_Advertisement})/${Revenue_selected_month_Advertisement}) ;;
+    sql: ((${Revenue_selected_month_Advertisement}-${Revenue_LM_Advertisement})/nullif(${Revenue_selected_month_Advertisement},0)) ;;
     value_format: "0.0%"
   }
 
@@ -206,7 +206,7 @@ view: finance_revenue_stack_derived {
 
   measure: Revenue_Growth_Purchases{
     type: number
-    sql: ((${Revenue_selected_month_Purchases}-${Revenue_LM_Purchases})/${Revenue_selected_month_Purchases}) ;;
+    sql: ((${Revenue_selected_month_Purchases}-${Revenue_LM_Purchases})/nullif(${Revenue_selected_month_Purchases},0)) ;;
     value_format: "0.0%"
   }
 
@@ -227,7 +227,7 @@ view: finance_revenue_stack_derived {
 
   measure: Revenue_Growth_PaidApps{
     type: number
-    sql: ((${Revenue_selected_month_PaidApps}-${Revenue_LM_PaidApps})/${Revenue_selected_month_PaidApps}) ;;
+    sql: ((${Revenue_selected_month_PaidApps}-${Revenue_LM_PaidApps})/nullif(${Revenue_selected_month_PaidApps},0)) ;;
     value_format: "0.0%"
   }
 
@@ -249,7 +249,7 @@ view: finance_revenue_stack_derived {
 
   measure: Revenue_Growth_CharUpgrade{
     type: number
-    sql: ((${Revenue_selected_month_CharUpgrade}-${Revenue_LM_CharUpgrade})/${Revenue_selected_month_CharUpgrade}) ;;
+    sql: ((${Revenue_selected_month_CharUpgrade}-${Revenue_LM_CharUpgrade})/nullif(${Revenue_selected_month_CharUpgrade},0)) ;;
     value_format: "0.0%"
   }
 
@@ -269,21 +269,21 @@ view: finance_revenue_stack_derived {
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.0;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height: 1.3;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
 
       <tr>
-      <td style="text-align:center;width:200px;padding-top: 15px;">
-      <p >Revenue<br style="line-height:1.5;"><b style="font-size:20px; ">{{finance_revenue_stack_derived.Revenue_selected_month._rendered_value}}</b>
+      <td style="text-align:left;width:200px;padding-top: 15px;font-size:13px;">
+      <p >REVENUE<br style="line-height:1.5;"><b style="font-size:18px; ">{{finance_revenue_stack_derived.Revenue_selected_month._rendered_value}}</b>
       </p>
       </td>
-      <td style="text-align:center;width:200px;padding-top: 15px;">
-      <p >Target<br style="line-height:1.5;"><b style="font-size:20px;"></b>
+      <td style="text-align:center;width:200px;padding-top: 15px;font-size:13px;">
+      <p style="line-height:1.5;" >TARGET<b style="font-size:8px;"></b>
       </p>
       </td>
      </tr>
 
-      <tr style="line-height:1.5;">
-      <td style="text-align:center; line-height:1.0;width:200px;font-size:13px;">
+      <tr>
+      <td style="text-align:left; line-height:0.5;width:200px;font-size:13px;">
       <p>
       {% if finance_revenue_stack_derived.Revenue_Growth._value >= 0 %}
 
@@ -298,8 +298,8 @@ view: finance_revenue_stack_derived {
       </p>
       </td>
 
-      <td style="text-align:center; line-height:1.0;width:200px;font-size:13px;">
-      <p>
+      <td style="text-align:center; line-height:0.0;width:200px;font-size:13px;">
+      <p style="line-height:0.0;">
      {{ finance_revenue_stack_derived.Revenue_Target._rendered_value }}
       </p>
       </td>
@@ -319,26 +319,21 @@ view: finance_revenue_stack_derived {
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.5;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height: 1.5;align:center;font-size:13px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
 
       <tr>
-      <td style="text-align:center;width:200px;padding-top: 15px;">
-      <p >IN-APP-ADVERTISEMENTS<br style="line-height:1.5;"><b style="font-size:20px; ">{{finance_revenue_stack_derived.Revenue_selected_month_Advertisement._rendered_value}}</b>
+      <td style="text-align:left;width:200px;padding-top: 15px;">
+      <p ><font color="#33a02c">● &ensp;</font>IN-APP-ADVERTISEMENTS<br style="line-height:1.5;"><b style="font-size:18px; ">{{finance_revenue_stack_derived.Revenue_selected_month_Advertisement._rendered_value}}</b>
       </p>
       </td>
-      <td style="text-align:center;width:200px;padding-top: 15px;">
-      <p >IN-APP-Purchases<br style="line-height:1.5;"><b style="font-size:20px;">{{finance_revenue_stack_derived.Revenue_selected_month_Purchases._rendered_value}}</b>
-      </p>
-      </td>
-      <td style="text-align:center;width:200px;padding-top: 15px;">
-      <p >
-
+      <td style="text-align:left;width:200px;padding-top: 15px;">
+      <p ><font color="#E2DF78">● &ensp;</font>IN-APP-PURCHASES<br style="line-height:1.0;"><b style="font-size:18px;">{{finance_revenue_stack_derived.Revenue_selected_month_Purchases._rendered_value}}</b>
       </p>
       </td>
       </tr>
 
       <tr>
-      <td style="text-align:center; line-height:1.0;width:200px;font-size:13px;">
+      <td style="text-align:left; line-height:1.0;width:200px;font-size:13px;">
       <p>
       {% if finance_revenue_stack_derived.Revenue_Growth_Advertisement._value >= 0 %}
 
@@ -353,7 +348,7 @@ view: finance_revenue_stack_derived {
       </p>
       </td>
 
-      <td style="text-align:center; line-height:1.0;width:200px;font-size:13px;">
+      <td style="text-align:left; line-height:1.0;width:200px;font-size:13px;">
       <p>
       {% if finance_revenue_stack_derived.Revenue_Growth_Purchases._value >= 0 %}
 
@@ -369,16 +364,16 @@ view: finance_revenue_stack_derived {
       </td>
       </tr>
       <tr>
-      <td style="text-align:center;width:200px;padding-top: 15px;">
-      <p >PREMIUM PAID APPS<br style="line-height:1.5;"><b style="font-size:20px; ">{{finance_revenue_stack_derived.Revenue_selected_month_PaidApps._rendered_value}}</b>
+      <td style="text-align:left;width:200px;padding-top: 15px;">
+      <p ><font color="#1ea8df">● &ensp;</font>PREMIUM&ensp;PAID&ensp;APPS<br style="line-height:1.5;"><b style="font-size:18px; ">{{finance_revenue_stack_derived.Revenue_selected_month_PaidApps._rendered_value}}</b>
       </p>
       </td>
-      <td style="text-align:center;width:200px;padding-top: 15px;">
-      <p >CHARACTER UPGRADES<br style="line-height:1.5;"><b style="font-size:20px;">{{finance_revenue_stack_derived.Revenue_selected_month_CharUpgrade._rendered_value}}</b>
+      <td style="text-align:left;width:200px;padding-top: 15px;">
+      <p ><font color="#ed6168">● &ensp;</font>CHARACTER&ensp;UPGRADES<br style="line-height:1.5;"><b style="font-size:18px;">{{finance_revenue_stack_derived.Revenue_selected_month_CharUpgrade._rendered_value}}</b>
       </p>
       </td>
        <tr>
-      <td style="text-align:center; line-height:1.0;width:200px;font-size:13px;">
+      <td style="text-align:left; line-height:1.0;width:200px;font-size:13px;">
       <p>
       {% if finance_revenue_stack_derived.Revenue_Growth_PaidApps._value >= 0 %}
 
@@ -393,7 +388,7 @@ view: finance_revenue_stack_derived {
       </p>
       </td>
 
-      <td style="text-align:center; line-height:1.0;width:200px;font-size:13px;">
+      <td style="text-align:left; line-height:1.0;width:200px;font-size:13px;">
       <p>
       {% if finance_revenue_stack_derived.Revenue_Growth_CharUpgrade._value >= 0 %}
 

@@ -148,26 +148,57 @@ measure: Session_Length_last12months {
 
   }
 
-  dimension: htmlcode_Overview
+  measure: htmlcode_Overview
   {
     sql: 1 ;;
+    type: number
     html:
     <html>
     <body>
     <div style="border-bottom: solid 1px #4285F4;">
-    <nav style="font-size: 18px; padding: 5px 10px 0 10px; height: 60px">
+    <nav style="font-size: 18px; padding: 5px 10px 0 10px; height: 50px">
 
-      <a style="padding: 5px 15px; border-top: solid 1px #4285F4; border-left: solid 1px #4285F4; border-right: solid 1px #4285F4; border-radius: 5px 5px 0 0; float: left; line-height: 40px; font-weight: bold; background-color: #eaf1fe;" >
+      <a style="padding: 5px 15px; border-top: solid 1px #4285F4; border-left: solid 1px #4285F4; border-right: solid 1px #4285F4; border-radius: 5px 5px 0 0; float: left; line-height: 30px; font-weight: bold; background-color: #eaf1fe;" >
 
-      Overview</a>
+      OVERVIEW</a>
 
-      <a href="https://thirdi.looker.com/dashboards/150?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; border-bottom: solid 1px #4285F4; float: left; line-height: 40px;"><big>Finance</big></a>&emsp;&emsp;
+      <a href="https://thirdi.looker.com/embed/dashboards/150?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; float: left; line-height: 40px;"><big>FINANCE</big></a>&emsp;&emsp;
 
-      <a href="https://thirdi.looker.com/dashboards/151?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; border-bottom: solid 1px #4285F4; float: left; line-height: 40px;"><big>User Engagement </big></a>&emsp;&emsp;
+      <a href="https://thirdi.looker.com/embed/dashboards/151?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; float: left; line-height: 40px;"><big>USER ENGAGEMENT</big></a>&emsp;&emsp;
 
-      <a href="https://thirdi.looker.com/dashboards/152?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; border-bottom: solid 1px #4285F4; float: left; line-height: 40px;"><big>Game Experience</big></a>&emsp;&emsp;
+      <a href="https://thirdi.looker.com/embed/dashboards/152?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; float: left; line-height: 40px;"><big>GAME EXPERIENCE</big></a>&emsp;&emsp;
 
-      <a href="https://thirdi.looker.com/dashboards/154?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; border-bottom: solid 1px #4285F4; float: left; line-height: 40px;"><big>Marketing</big></a>&emsp;&emsp;
+      <a href="https://thirdi.looker.com/embed/dashboards/154?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; float: left; line-height: 40px;"><big>MARKETING</big></a>&emsp;&emsp;
+
+
+      </nav>
+
+      </div>
+      </body>
+      </html>;;
+  }
+
+  dimension: htmlcode_Overview1
+  {
+    sql: 1 ;;
+
+    html:
+    <html>
+    <body>
+    <div style="border-bottom: solid 1px #4285F4;">
+    <nav style="font-size: 18px; padding: 5px 10px 0 10px; height: 50px">
+
+      <a style="padding: 5px 15px; border-top: solid 1px #4285F4; border-left: solid 1px #4285F4; border-right: solid 1px #4285F4; border-radius: 5px 5px 0 0; float: left; line-height: 30px; font-weight: bold; background-color: #eaf1fe;" >
+
+      OVERVIEW</a>
+
+      <a href="https://thirdi.looker.com/dashboards/150?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; float: left; line-height: 40px;"><big>FINANCE</big></a>&emsp;&emsp;
+
+      <a href="https://thirdi.looker.com/dashboards/151?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; float: left; line-height: 40px;"><big>USER ENGAGEMENT</big></a>&emsp;&emsp;
+
+      <a href="https://thirdi.looker.com/dashboards/152?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; float: left; line-height: 40px;"><big>GAME EXPERIENCE</big></a>&emsp;&emsp;
+
+      <a href="https://thirdi.looker.com/dashboards/154?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; float: left; line-height: 40px;"><big>MARKETING</big></a>&emsp;&emsp;
 
 
       </nav>
@@ -178,27 +209,26 @@ measure: Session_Length_last12months {
   }
 
 
-
-  dimension: htmlcode_Finance
+  measure: htmlcode_Finance
   {
     sql: 1 ;;
+    type: number
     html:
     <html>
     <body>
     <div style="border-bottom: solid 1px #4285F4;">
-    <nav style="font-size: 18px; padding: 5px 10px 0 10px; height: 60px">
+    <nav style="font-size: 18px; padding: 5px 10px 0 10px; height: 50px">
 
+      <a href="https://thirdi.looker.com/embed/dashboards/149?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; float: left; line-height: 40px;"><big>OVERVIEW</big></a>&emsp;&emsp;
 
-      <a href="https://thirdi.looker.com/dashboards/149?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; border-bottom: solid 1px #4285F4; float: left; line-height: 40px;"><big>Overview</big></a>&emsp;&emsp;
+      <a style="padding: 5px 15px; border-top: solid 1px #4285F4; border-left: solid 1px #4285F4; border-right: solid 1px #4285F4; border-radius: 5px 5px 0 0; float: left; line-height: 30px; font-weight: bold; background-color: #eaf1fe;" >
+      FINANCE</a>
 
-      <a style="padding: 5px 15px; border-top: solid 1px #4285F4; border-left: solid 1px #4285F4; border-right: solid 1px #4285F4; border-radius: 5px 5px 0 0; float: left; line-height: 40px; font-weight: bold; background-color: #eaf1fe;" >
-      Finance </a>
+      <a href="https://thirdi.looker.com/embed/dashboards/151?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; float: left; line-height: 40px;"><big>USER ENGAGEMENT</big></a>&emsp;&emsp;
 
-      <a href="https://thirdi.looker.com/dashboards/151?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; border-bottom: solid 1px #4285F4; float: left; line-height: 40px;"><big>User Engagement </big></a>&emsp;&emsp;
+      <a href="https://thirdi.looker.com/embed/dashboards/152?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; float: left; line-height: 40px;"><big>GAME EXPERIENCE</big></a>&emsp;&emsp;
 
-      <a href="https://thirdi.looker.com/dashboards/152?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; border-bottom: solid 1px #4285F4; float: left; line-height: 40px;"><big>Game Experience</big></a>&emsp;&emsp;
-
-      <a href="https://thirdi.looker.com/dashboards/154?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; border-bottom: solid 1px #4285F4; float: left; line-height: 40px;"><big>Marketing</big></a>&emsp;&emsp;
+      <a href="https://thirdi.looker.com/embed/dashboards/154?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; float:left; line-height:40px;"><big>MARKETING</big></a>&emsp;&emsp;
 
 
       </nav>
@@ -208,27 +238,28 @@ measure: Session_Length_last12months {
       </html>;;
   }
 
-  dimension: htmlcode_UserEngagement
+  measure: htmlcode_UserEngagement
   {
     sql: 1 ;;
+    type: number
     html:
     <html>
     <body>
     <div style="border-bottom: solid 1px #4285F4;">
-    <nav style="font-size: 18px; padding: 5px 10px 0 10px; height: 60px">
+    <nav style="font-size: 18px; padding: 5px 10px 0 10px; height: 50px">
 
 
-      <a href="https://thirdi.looker.com/dashboards/149?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; border-bottom: solid 1px #4285F4; float: left; line-height: 40px;"><big>Overview</big></a>&emsp;&emsp;
+      <a href="https://thirdi.looker.com/embed/dashboards/149?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; float: left; line-height: 40px;"><big>OVERVIEW</big></a>&emsp;&emsp;
 
-      <a href="https://thirdi.looker.com/dashboards/150?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; border-bottom: solid 1px #4285F4; float: left; line-height: 40px;"><big>Finance </big></a>&emsp;&emsp;
+      <a href="https://thirdi.looker.com/embed/dashboards/150?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; float: left; line-height: 40px;"><big>FINANCE </big></a>&emsp;&emsp;
 
-      <a style="padding: 5px 15px; border-top: solid 1px #4285F4; border-left: solid 1px #4285F4; border-right: solid 1px #4285F4; border-radius: 5px 5px 0 0; float: left; line-height: 40px; font-weight: bold; background-color: #eaf1fe;" >
+      <a style="padding: 5px 15px; border-top: solid 1px #4285F4; border-left: solid 1px #4285F4; border-right: solid 1px #4285F4; border-radius: 5px 5px 0 0; float: left; line-height: 30px; font-weight: bold; background-color: #eaf1fe;" >
 
-      User Engagement</a>
+      USER ENGAGEMENT</a>
 
-      <a href="https://thirdi.looker.com/dashboards/152?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; border-bottom: solid 1px #4285F4; float: left; line-height: 40px;"><big>Game Experience</big></a>&emsp;&emsp;
+      <a href="https://thirdi.looker.com/embed/dashboards/152?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; float: left; line-height: 40px;"><big>GAME EXPERIENCE</big></a>&emsp;&emsp;
 
-      <a href="https://thirdi.looker.com/dashboards/154?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; border-bottom: solid 1px #4285F4; float: left; line-height: 40px;"><big>Marketing</big></a>&emsp;&emsp;
+      <a href="https://thirdi.looker.com/embed/dashboards/154?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; float: left; line-height: 40px;"><big>MARKETING</big></a>&emsp;&emsp;
 
 
       </nav>
@@ -238,27 +269,28 @@ measure: Session_Length_last12months {
       </html>;;
   }
 
-  dimension: htmlcode_GameExperience
+  measure: htmlcode_GameExperience
   {
     sql: 1 ;;
+    type: number
     html:
     <html>
     <body>
     <div style="border-bottom: solid 1px #4285F4;">
-    <nav style="font-size: 18px; padding: 5px 10px 0 10px; height: 60px">
+    <nav style="font-size: 18px; padding: 5px 10px 0 10px; height: 50px">
 
 
-      <a href="https://thirdi.looker.com/dashboards/149?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; border-bottom: solid 1px #4285F4; float: left; line-height: 40px;"><big>Overview</big></a>&emsp;&emsp;
+      <a href="https://thirdi.looker.com/embed/dashboards/149?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px;  float: left; line-height: 40px;"><big>OVERVIEW</big></a>&emsp;&emsp;
 
-      <a href="https://thirdi.looker.com/dashboards/150?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; border-bottom: solid 1px #4285F4; float: left; line-height: 40px;"><big>Finance </big></a>&emsp;&emsp;
+      <a href="https://thirdi.looker.com/embed/dashboards/150?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px;  float: left; line-height: 40px;"><big>FINANCE</big></a>&emsp;&emsp;
 
-      <a href="https://thirdi.looker.com/dashboards/151?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; border-bottom: solid 1px #4285F4; float: left; line-height: 40px;"><big>User Engagement </big></a>&emsp;&emsp;
+      <a href="https://thirdi.looker.com/embed/dashboards/151?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; float: left; line-height: 40px;"><big>USER ENGAGEMENT</big></a>&emsp;&emsp;
 
-      <a style="padding: 5px 15px; border-top: solid 1px #4285F4; border-left: solid 1px #4285F4; border-right: solid 1px #4285F4; border-radius: 5px 5px 0 0; float: left; line-height: 40px; font-weight: bold; background-color: #eaf1fe;" >
+      <a style="padding: 5px 15px; border-top: solid 1px #4285F4; border-left: solid 1px #4285F4; border-right: solid 1px #4285F4; border-radius: 5px 5px 0 0; float: left; line-height: 30px; font-weight: bold; background-color: #eaf1fe;" >
 
-     Game Experience</a>
+     GAME EXPERIENCE</a>
 
-     <a href="https://thirdi.looker.com/dashboards/154?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; border-bottom: solid 1px #4285F4; float: left; line-height: 40px;"><big>Marketing</big></a>&emsp;&emsp;
+     <a href="https://thirdi.looker.com/embed/dashboards/154?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px;float: left; line-height: 40px;"><big>MARKETING</big></a>&emsp;&emsp;
 
 
       </nav>
@@ -269,28 +301,29 @@ measure: Session_Length_last12months {
   }
 
 
-  dimension: htmlcode_Marketing
+  measure: htmlcode_Marketing
   {
     sql: 1 ;;
+    type: number
     html:
     <html>
     <body>
     <div style="border-bottom: solid 1px #4285F4;">
-    <nav style="font-size: 18px; padding: 5px 10px 0 10px; height: 60px">
+    <nav style="font-size: 18px; padding: 5px 10px 0 10px; height: 50px">
 
 
 
-      <a href="https://thirdi.looker.com/dashboards/149?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; border-bottom: solid 1px #4285F4; float: left; line-height: 40px;"><big>Overview</big></a>&emsp;&emsp;
+      <a href="https://thirdi.looker.com/embed/dashboards/149?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; float: left; line-height: 40px;"><big>OVERVIEW</big></a>&emsp;&emsp;
 
-      <a href="https://thirdi.looker.com/dashboards/150?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; border-bottom: solid 1px #4285F4; float: left; line-height: 40px;"><big>Finance </big></a>&emsp;&emsp;
+      <a href="https://thirdi.looker.com/embed/dashboards/150?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; float: left; line-height: 40px;"><big>FINANCE</big></a>&emsp;&emsp;
 
-      <a href="https://thirdi.looker.com/dashboards/151?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; border-bottom: solid 1px #4285F4; float: left; line-height: 40px;"><big>User Engagement</big></a>&emsp;&emsp;
+      <a href="https://thirdi.looker.com/embed/dashboards/151?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; float: left; line-height: 40px;"><big>USER ENGAGEMENT</big></a>&emsp;&emsp;
 
-      <a href="https://thirdi.looker.com/dashboards/152?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; border-bottom: solid 1px #4285F4; float: left; line-height: 40px;"><big>Game Experience</big></a>&emsp;&emsp;
+      <a href="https://thirdi.looker.com/embed/dashboards/152?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" style="padding: 5px 15px; float: left; line-height: 40px;"><big>GAME EXPERIENCE</big></a>&emsp;&emsp;
 
-       <a style="padding: 5px 15px; border-top: solid 1px #4285F4; border-left: solid 1px #4285F4; border-right: solid 1px #4285F4; border-radius: 5px 5px 0 0; float: left; line-height: 40px; font-weight: bold; background-color: #eaf1fe;" >
+       <a style="padding: 5px 15px; border-top: solid 1px #4285F4; border-left: solid 1px #4285F4; border-right: solid 1px #4285F4; border-radius: 5px 5px 0 0; float: left; line-height: 30px; font-weight: bold; background-color: #eaf1fe;" >
 
-      Marketing</a>
+      MARKETING</a>
 
       </nav>
 
