@@ -194,27 +194,50 @@ view: game_experience_drop_offs_derived {
 
 
 
+  measure: Drop_Offs_Tutorial_Interpretation_selected_month {
+    type: sum
+    sql: case when {% condition month_filter %} ${date__month} {% endcondition %} then ${game_drop_offs_count} end ;;
+    #value_format: "0.0"
+    filters: [drop_off_causes: "Tutorial Interpretation"]
+  }
+
+  measure: Drop_Offs_Count_Tutorial_Interpretation_Last_Month{
+    type: sum
+    sql: CASE WHEN {% condition month_filter %} To_char(ADD_MONTHS(to_date(${date__date},'yyyy-mm-dd'),1),'yyyy-mm')
+      {% endcondition %} THEN ${game_drop_offs_count} end ;;
+    value_format: "0.0%"
+    filters: [drop_off_causes: "Tutorial Interpretation"]
+  }
+
+  measure: Drop_Offs_Tutorial_Interpretation_Growth{
+    type: number
+    sql: ((${Drop_Offs_Tutorial_Interpretation_selected_month}-${Drop_Offs_Count_Tutorial_Interpretation_Last_Month})/nullif(${Drop_Offs_Count_Tutorial_Interpretation_Last_Month},0)) ;;
+    value_format: "0.0%"
+
+  }
+
+
 
   measure:Game_Experience_DropOffsAndCauses_tab{
     sql: 1 ;;
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.5;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height: 1.3;align:center;font-size:14px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
 
       <tr>
-      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-      <p ><font color="#a9c574">● &ensp;</font>FTUE<br style="line-height:1.5;"><b style="font-size:18px; ">{{game_experience_drop_offs_derived.Drop_Offs_FTUE_selected_month._rendered_value}}</b>
+      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:14px;padding-left:5px;">
+      <p ><font color="#06bee1">● &ensp;</font>FTUE<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{game_experience_drop_offs_derived.Drop_Offs_FTUE_selected_month._rendered_value}}</b>
       </p>
       </td>
-      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-      <p ><font color="#929292">● &ensp;</font>TEDIOUS&ensp;GAME&ensp;SESSIONS<br style="line-height:1.5;"><b style="font-size:18px;">{{game_experience_drop_offs_derived.Drop_Offs_Tedious_Game_Sessions_selected_month._rendered_value}}</b>
+      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:14px;padding-left:15px;">
+      <p ><font color="#3388ff">● &ensp;</font>Tedious&nbsp;Game&nbsp;Sessions<br style="line-height:1.5;"><b style="font-size:29.5px;">{{game_experience_drop_offs_derived.Drop_Offs_Tedious_Game_Sessions_selected_month._rendered_value}}</b>
       </p>
 
       </tr>
 
       <tr>
-      <td style="text-align:LEFT; line-height:1.0;width:200px;font-size:13px;">
+      <td style="text-align:LEFT; line-height:1.0;width:200px;font-size:13px;padding-left:5px;">
       <p>
       {% if game_experience_drop_offs_derived.Drop_Offs_FTUE_Growth._value >= 0 %}
 
@@ -229,7 +252,7 @@ view: game_experience_drop_offs_derived {
       </p>
       </td>
 
-      <td style="text-align:LEFT; line-height:1.0;width:200px;font-size:13px;">
+      <td style="text-align:LEFT; line-height:1.0;width:200px;font-size:13px;padding-left:15px;">
       <p>
       {% if game_experience_drop_offs_derived.Drop_Offs_Tedious_Game_Sessions_Growth._value >= 0 %}
 
@@ -245,16 +268,18 @@ view: game_experience_drop_offs_derived {
       </td>
       </tr>
       <tr>
-      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-      <p ><font color="#62bad4">● &ensp;</font>EXTENSIVE&ensp;LOAD&ensp;TIME<br style="line-height:1.5;"><b style="font-size:18px; ">{{game_experience_drop_offs_derived.Drop_Offs_Extensive_Load_Time_selected_month._rendered_value}}</b>
+      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:14px;padding-left:5px;">
+      <br>
+      <p ><font color="#33a02c">● &ensp;</font>Extensive&nbsp;Load&nbsp;Time<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{game_experience_drop_offs_derived.Drop_Offs_Extensive_Load_Time_selected_month._rendered_value}}</b>
       </p>
       </td>
-      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-      <p ><font color="#9fdee0">● &ensp;</font>GAME&ensp;PLAY&ensp;BALANCE<br style="line-height:1.5;"><b style="font-size:18px;">{{game_experience_drop_offs_derived.Drop_Offs_Game_Play_Balance_selected_month._rendered_value}}</b>
+      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:14px;padding-left:15px;">
+      <br>
+      <p ><font color="#62b6cb">● &ensp;</font>Game&nbsp;Play&nbsp;Balance<br style="line-height:1.5;"><b style="font-size:29.5px;">{{game_experience_drop_offs_derived.Drop_Offs_Game_Play_Balance_selected_month._rendered_value}}</b>
       </p>
       </td>
       <tr>
-      <td style="text-align:LEFT; line-height:1.0;width:200px;font-size:13px;">
+      <td style="text-align:LEFT; line-height:1.0;width:200px;font-size:13px;padding-left:5px;">
       <p>
       {% if game_experience_drop_offs_derived.Drop_Offs_Extensive_Load_Time_Growth._value >= 0 %}
 
@@ -269,7 +294,7 @@ view: game_experience_drop_offs_derived {
       </p>
       </td>
 
-      <td style="text-align:LEFT; line-height:1.0;width:200px;font-size:13px;">
+      <td style="text-align:LEFT; line-height:1.0;width:200px;font-size:13px;padding-left:20px;">
       <p>
       {% if game_experience_drop_offs_derived.Drop_Offs_Game_Play_Balance_Growth._value >= 0 %}
 
@@ -284,16 +309,12 @@ view: game_experience_drop_offs_derived {
       </p>
       </td>
       </tr>
-
-
       </table>
-
-
-
-      </body>
+       </body>
       </html>
       ;;
   }
+
 
 
 

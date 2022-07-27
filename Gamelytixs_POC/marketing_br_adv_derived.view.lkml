@@ -455,36 +455,36 @@ view: marketing_br_adv_derived {
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.5;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height: 1.5;align:center;font-size:14px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
       <tr>
-      <td style="text-align:center;width:200px;">
-      <p >TOTAL&ensp;REACH<br style="line-height:1.0;font-size: 10pt;"><b style="font-size:20px; ">{{marketing_br_adv_derived.Total_Reach_selectedMonth._rendered_value}}</b>
-      </p>
+      <td style="text-align:center;width:200px;font-size: 9pt;">
+      TOTAL&nbsp;REACH<br style="line-height:1.0;font-size: 8pt;"><b style="font-size:29.5px; ">{{marketing_br_adv_derived.Total_Reach_selectedMonth._rendered_value}}</b>
+
       </td>
-      <td style="text-align:center;width:200px;">
-      <p ><br style="line-height:1.0;">
+      <td style="text-align:center;width:150px;">
+      <br style="line-height:1.0;">
       <img src="https://img.icons8.com/color/48/000000/facebook-circled--v1.png" width="25" height="25"/>
-      </p>
+
       </td>
        </td>
-      <td style="text-align:center;width:200px;">
-      <p ><br style="line-height:1.0;">
+      <td style="text-align:center;width:150px;">
+      <br style="line-height:1.0;">
       <img src="https://img.icons8.com/color/48/000000/youtube-play.png" width="25" height="25"/>
-      </p>
+
       </td>
        </td>
-      <td style="text-align:center;width:200px;">
-      <p ><br style="line-height:1.0;">
+      <td style="text-align:center;width:150px;">
+      <br style="line-height:1.0;">
       <img src="https://img.icons8.com/fluency/48/000000/instagram-new.png" width="25" height="25"/>
-      </p>
+
       </td>
        </td>
 
      </tr>
 
       <tr>
-      <td style="text-align:center; width:200px;">
-      <p>
+      <td style="text-align:center; width:200px;font-size:13px;">
+
       {% if marketing_br_adv_derived.TotalReach_Growth._value >= 0 %}
 
      <font color="green"> ▲ {{ marketing_br_adv_derived.TotalReach_Growth._rendered_value }}</font>&nbsp; LM
@@ -494,21 +494,21 @@ view: marketing_br_adv_derived {
      <font color="red"> ▼  {{ marketing_br_adv_derived.TotalReach_Growth._rendered_value }}</font>&nbsp; LM
 
     {% endif %}
-      </p>
+
       </td>
-       <td style="text-align:center;width:200px;">
-      <p >{{marketing_br_adv_derived.FBReach_selected_month._rendered_value}}
-      </p>
-      </td>
-       </td>
-      <td style="text-align:center;width:200px;">
-      <p >{{marketing_br_adv_derived.YTReach_selected_month._rendered_value}}
-      </p>
+       <td style="text-align:center;width:200px;font-size:13px;">
+     {{marketing_br_adv_derived.FBReach_selected_month._rendered_value}}
+
       </td>
        </td>
-      <td style="text-align:center;width:200px;">
-      <p >{{marketing_br_adv_derived.InstaReach_selected_month._rendered_value}}
-      </p>
+      <td style="text-align:center;width:200px;font-size:13px;">
+      {{marketing_br_adv_derived.YTReach_selected_month._rendered_value}}
+
+      </td>
+       </td>
+      <td style="text-align:center;width:200px;font-size:13px;">
+      {{marketing_br_adv_derived.InstaReach_selected_month._rendered_value}}
+
       </td>
        </td>
       </tr>
@@ -524,35 +524,35 @@ view: marketing_br_adv_derived {
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.5;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height:1.5;align:center;font-size:14px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
      <tr>
-      <td style="text-align:LEFT;width:200px;font-size: 13pt;">
-      <p style="font-size:10pt;">BRAND&ensp;REACH<br style="line-height:1.0;font-size:10px;"><b style="font-size:18px;">{{marketing_br_adv_derived.Total_Reach_selectedMonth._rendered_value}}</b>
-      </p>
+      <td style="text-align:LEFT;width:200px;font-size: 13pt;padding-left:10px;padding-top:10px;">
+      <font style="font-size:10pt;">BRAND&nbsp;REACH</font><br style="line-height:1.5;font-size:10px;"><b style="font-size:29.5px;">{{marketing_br_adv_derived.Total_Reach_selectedMonth._rendered_value}}</b>
+
       </td>
-      <td style="text-align:center;width:200px;font-size: 13pt;">
-      <p ><br style="line-height:1.0;">
+      <td style="text-align:center;width:200px;font-size: 10pt;">
+      <br style="line-height:1.0;">
       <img src="https://img.icons8.com/color/48/000000/facebook-circled--v1.png" width="25" height="25"/>
-      </p>
+
       </td>
        </td>
       <td style="text-align:center;width:200px;font-size: 13pt;">
-      <p ><br style="line-height:1.0;">
+      <br style="line-height:1.0;">
       <img src="https://img.icons8.com/color/48/000000/youtube-play.png" width="25" height="25"/>
-      </p>
+
       </td>
        </td>
       <td style="text-align:center;width:200px;font-size: 13pt;">
-      <p ><br style="line-height:1.0;">
+      <br style="line-height:1.0;">
       <img src="https://img.icons8.com/fluency/48/000000/instagram-new.png" width="25" height="25"/>
-      </p>
+
       </td>
        </td>
 
       </tr>
 
       <tr>
-      <td style="text-align:LEFT; width:200px;font-size: 10pt;">
+      <td style="text-align:LEFT; width:200px;font-size: 10pt;padding-left:15px;">
       <p>
       {% if marketing_br_adv_derived.TotalReach_Growth._value >= 0 %}
 

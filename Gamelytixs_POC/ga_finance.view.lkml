@@ -982,26 +982,29 @@ view: ga_finance {
       ;;
   }
 
+
+
   measure:Finance_MAU_tab{
     sql: 1 ;;
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.3;align:LEFT;font-size:13px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height:1.5;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
        <tr>
-      <td style="text-align:LEFT;width:200px;line-height:1.0;padding-top: 15px;">
-      <p >MAU<b style="font-size:18px;"><br style="line-height:1.7;">{{ga_finance.MAU_selected_month._rendered_value}}</b>
-      </p>
+      <td style="text-align:left;width:200px;padding-top:10px;font-size:13px;padding-left:10px;">
+      MAU<br style="line-height:1.5"><b style="font-size:29.5px; ">{{ga_finance.MAU_selected_month._rendered_value}}</b>
+
       </td>
-      <td style="text-align:center;width:200px;line-height:1.0;padding-top: 8px;">
-      <p >DAU/MAU<b style="font-size:8px;"></b>
-      </p>
+      <td style="text-align:center;width:200px;padding-top: 35px;font-size:13px;padding-left:55px;">
+      DAU / MAU<br style="line-height:1.5;"><b style="font-size:15px;">
+      {{ ga_finance.DAU_MAU._rendered_value }}
+      </b>
       </td>
      </tr>
 
-      <tr style="line-height:1.5;">
-      <td style="text-align:LEFT; line-height:1.0;width:200px;font-size:13px;">
-      <p>
+      <tr>
+      <td style="text-align:left; line-height:1.5;width:200px;font-size:13px;Padding-left:10px;">
+
       {% if ga_finance.MAU_Growth._value >= 0 %}
 
       <font color="green"> ▲ {{ ga_finance.MAU_Growth._rendered_value }}</font>&nbsp; LM
@@ -1012,14 +1015,10 @@ view: ga_finance {
 
       {% endif %}
 
-      </p>
+
       </td>
 
-      <td style="text-align:center; line-height:1.0;width:200px;font-size:13px;">
-      <p >
-     {{ ga_finance.DAU_MAU._rendered_value }}
-      </p>
-      </td>
+
 
       </tr>
       </table>
@@ -1029,25 +1028,26 @@ view: ga_finance {
       ;;
   }
 
+
   measure:Finance_ARPU_tab{
     sql: 1 ;;
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.3;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height: 1.5;align:center;font-size:15px;padding-left: 30px;background-color: #ffffff;border-radius: 5px; " >
       <tr>
-      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-      <p >ARPU<br style="line-height:1.5;"><b style="font-size:18px; ">{{ga_finance.ARPU_selected_month._rendered_value}}</b>
-      </p>
+      <td style="text-align:left;width:200px;padding-left:15Px;padding-top: 15px;font-size:13px;padding-left:10px;">
+      ARPU<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{ga_finance.ARPU_selected_month._rendered_value}}</b>
+
       </td>
-      <td style="text-align:center;width:200px;padding-top: 15px;font-size:13px;">
-      <p >ARPPU<br style="line-height:1.5;"><b style="font-size:18px;">{{ga_finance.ARPPU_selected_month._rendered_value}}</b>
-      </p>
+      <td style="text-align:left;width:200px;padding-top: 15px;padding-right:15px;font-size:13px;padding-left:60px;">
+      ARPPU<br style="line-height:1.5;"><b style="font-size:29.5px;">{{ga_finance.ARPPU_selected_month._rendered_value}}</b>
+
       </td>
     </tr>
 
-      <tr style="line-height:1.5;">
-      <td style="text-align:LEFT; line-height:1.0;width:200px;font-size:13px;">
+      <tr">
+      <td style="text-align:left; line-height:1.5;width:200px;font-size:13px;padding-left: 10px;">
       <p>
       {% if ga_finance.ARPU_Growth._value >= 0 %}
 
@@ -1062,15 +1062,15 @@ view: ga_finance {
       </p>
       </td>
 
-      <td style="text-align:center; line-height:1.0;width:200px;font-size:13px;">
+      <td style="text-align:left; line-height:1.5;width:200px;font-size:13px;padding-left:60px;">
       <p>
-      {% if ga_finance.ARPU_Growth._value >= 0 %}
+      {% if ga_finance.ARPPU_Growth._value >= 0 %}
 
       <font color="green"> ▲ {{ ga_finance.ARPPU_Growth._rendered_value }}</font>&nbsp; LM
 
       {% else %}
 
-      <font color="red"> ▼  {{ ga_finance.ARPPU_Growth._rendered_value }}</font>&nbsp; LM
+      <font color="red">▼  {{ ga_finance.ARPPU_Growth._rendered_value }}</font>&nbsp; LM
 
       {% endif %}
 
@@ -1089,21 +1089,22 @@ view: ga_finance {
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.3;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height: 1.5;align:center;font-size:14px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
        <tr>
-      <td style="text-align:left;width:200px;padding-top: 15px;font-size:13px;">
-      <p >ROI<br style="line-height:1.8;"><b style="font-size:18px; ">{{ga_finance.ROI_selected_month._rendered_value}}</b>
-      </p>
+      <td style="text-align:left;width:200px;padding-top: 15px;font-size:13px;padding-left:10px;">
+      ROI<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{ga_finance.ROI_selected_month._rendered_value}}</b>
+
       </td>
-      <td style="text-align:center;width:200px;padding-top: 15px;font-size:13px;">
-      <p >TARGET<br style="line-height:1.5;"><b style="font-size:8px;"></b>
+      <td style="text-align:center;width:200px;padding-top: 35px;font-size:14px;padding-left:55px;">
+      <p >Target<br style="line-height:1.5;"><b style="font-size:15px;">
+      {{ ga_finance.Target2._rendered_value }}</b>
       </p>
       </td>
      </tr>
 
-      <tr style="line-height:1.5;">
-      <td style="text-align:left; line-height:1.0;width:200px;font-size:13px;">
-      <p>
+      <tr>
+      <td style="text-align:left; line-height:1.5;width:200px;font-size:13px;Padding-left:10px;">
+
       {% if ga_finance.ROI_Growth._value >= 0 %}
 
       <font color="green"> ▲ {{ ga_finance.ROI_Growth._rendered_value }}</font>&nbsp; LM
@@ -1114,15 +1115,8 @@ view: ga_finance {
 
       {% endif %}
 
-      </p>
-      </td>
 
-      <td style="text-align:center; line-height:1.0;width:200px;font-size:13px;">
-      <p>
-      {{ ga_finance.Target2._rendered_value }}
-      </p>
       </td>
-
       </tr>
       </table>
 
@@ -1137,13 +1131,14 @@ view: ga_finance {
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.0;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height: 1.3;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
        <tr>
-      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-      <p >TRANSACTIONS<br style="line-height:1.5;"><b style="font-size:18px; ">{{ga_finance.Transactions_selected_month._rendered_value}}</b>
+      <td style="text-align:LEFT;width:200px;padding-top: 15px;Padding-left:15px;font-size:13px;">
+      <p> TRANSACTIONS<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{ga_finance.Transactions_selected_month._rendered_value}}</b>
       </p>
       </td>
-      <td style="text-align:center;width:200px;padding-top: 15px;">
+      <td style="text-align:center;width:200px;padding-top: 15px;padding-left:15px;font-size:13px;">
+      <br>
       <p>
       {% if ga_finance.Transactions_Growth._value >= 0 %}
 
@@ -1157,7 +1152,7 @@ view: ga_finance {
 
       </p>
 
-      </p>
+
       </td>
      </tr>
 
@@ -1174,13 +1169,13 @@ view: ga_finance {
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.0;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height: 1.3;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
        <tr>
-      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-      <p >LONG&ensp;TIME&ensp;VALUE<br style="line-height:1.5;"><b style="font-size:18px; ">{{ga_finance.LTV_selected_month._rendered_value}}</b>
+      <td style="text-align:LEFT;width:200px;padding-top:15px;font-size:13px;padding-left:15px;">
+      <p >LONG&nbsp;TIME&nbsp;VALUE<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{ga_finance.LTV_selected_month._rendered_value}}</b>
       </p>
       </td>
-      <td style="text-align:center;width:200px;padding-top: 15px;">
+      <td style="text-align:center;width:200px;padding-top:30px;padding-left:15px;font-size:13px;">
       <p>
       {% if ga_finance.LTV_Growth._value >= 0 %}
 
@@ -1211,13 +1206,13 @@ view: ga_finance {
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.0;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height: 1.3;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
        <tr>
-      <td style="text-align:left;width:200px;padding-top: 15px;font-size:13px;">
-      <p >COST/INSTALL<br style="line-height:1.5;"><b style="font-size:18px; ">{{ga_finance.CPI_selected_month._rendered_value}}</b>
+      <td style="text-align:left;width:200px;padding-top:15px;font-size:13px;padding-left:15px;">
+      <p >COST / INSTALL<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{ga_finance.CPI_selected_month._rendered_value}}</b>
       </p>
       </td>
-      <td style="text-align:center;width:200px;padding-top: 15px;">
+      <td style="text-align:center;width:200px;padding-top:35px;padding-left:15px;font-size:13px;">
       <p>
       {% if ga_finance.CPI_Growth._value >= 0 %}
 
@@ -1249,13 +1244,13 @@ view: ga_finance {
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.0;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height: 1.3;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
        <tr>
-      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-      <p >CONVERSION &ensp;RATE<br style="line-height:1.5;"><b style="font-size:18px; ">{{ga_finance.Conversion_Rate_selected_month._rendered_value}}</b>
+      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;padding-left:15px;">
+      <p >CONVERSION &nbsp;RATE<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{ga_finance.Conversion_Rate_selected_month._rendered_value}}</b>
       </p>
       </td>
-      <td style="text-align:center;width:200px;padding-top: 15px;">
+      <td style="text-align:center;width:200px;padding-top:30px;padding-left:15px;font-size:13px;">
       <p>
       {% if ga_finance.Conversion_Rate_Growth._value >= 0 %}
 
@@ -1287,21 +1282,19 @@ view: ga_finance {
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.0;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height: 1.5;align:center;font-size:14px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
       <tr>
-      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-      <p >MAU-NEW<br style="line-height:1.5;"><b style="font-size:18px; ">{{ga_finance.NewUsers_selected_month._rendered_value}}</b>
-      </p>
+      <td style="text-align:LEFT;width:200px;padding-top: 10px;font-size:13px;padding-left:10px;">
+      MAU-NEW<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{ga_finance.NewUsers_selected_month._rendered_value}}</b>
       </td>
-      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-      <p >MAU-RETURNING<br style="line-height:1.5;"><b style="font-size:18px;">{{ga_finance.ReturningUsers_selected_month._rendered_value}}</b>
-      </p>
+      <td style="text-align:LEFT;width:200px;padding-top: 10px;font-size:13px;padding-left:40px;">
+      MAU-RETURNING<br style="line-height:1.5;"><b style="font-size:29.5px;">{{ga_finance.ReturningUsers_selected_month._rendered_value}}</b>
       </td>
     </tr>
 
-      <tr style="line-height:1.5;">
-      <td style="text-align:LEFT; line-height:1.0;width:200px;font-size:13px;">
-      <p>
+      <tr>
+      <td style="text-align:LEFT; line-height:1.5;width:200px;font-size:13px;padding-left:10px;">
+
       {% if ga_finance.NewUsers_Growth._value >= 0 %}
 
       <font color="green"> ▲ {{ ga_finance.NewUsers_Growth._rendered_value }}</font>&nbsp; LM
@@ -1312,11 +1305,11 @@ view: ga_finance {
 
       {% endif %}
 
-      </p>
+
       </td>
 
-      <td style="text-align:LEFT; line-height:1.0;width:200px;font-size:13px;">
-      <p>
+      <td style="text-align:LEFT; line-height:1.5;width:200px;font-size:13px;padding-left:40px;">
+
       {% if ga_finance.ARPU_Growth._value >= 0 %}
 
       <font color="green"> ▲ {{ ga_finance.ReturningUsers_Growth._rendered_value }}</font>&nbsp; LM
@@ -1327,7 +1320,7 @@ view: ga_finance {
 
       {% endif %}
 
-      </p>
+
       </td>
       </tr>
       </table>
@@ -1342,22 +1335,21 @@ view: ga_finance {
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.0;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height: 1.5;align:center;font-size:14px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
 
       <tr>
-      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-      <p >SESSION&ensp;COUNT<br style="line-height:1.5;"><b style="font-size:18px; ">{{ga_finance.SessionCount_selected_month._rendered_value}}</b>
-      </p>
+      <td style="text-align:LEFT;width:200px;padding-top: 10px;font-size:13px;padding-left:10px;">
+      SESSION&nbsp;COUNT<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{ga_finance.SessionCount_selected_month._rendered_value}}</b>
       </td>
-      <td style="text-align:center;width:200px;padding-top: 15px;font-size:13px;">
-      <p >TARGET<br style="line-height:1.5;"><b style="font-size:18px;"></b>
-      </p>
+      <td style="text-align:center;width:200px;padding-top: 35px;font-size:14px;padding-left:55px;">
+      Target<br style="line-height:1.5;"><b style="font-size:15px;">
+       {{ga_finance.target._rendered_value}}</b>
       </td>
       </tr>
 
-      <tr style="line-height:1.5;">
-      <td style="text-align:LEFT; line-height:1.0;width:200px;font-size:13px;">
-      <p>
+      <tr>
+      <td style="text-align:LEFT; line-height:1.5;width:200px;font-size:13px;padding-left:10px;">
+
       {% if ga_finance.SessionCount_Growth._value >= 0 %}
 
       <font color="green"> ▲ {{ ga_finance.SessionCount_Growth._rendered_value }}</font>&nbsp; LM
@@ -1368,15 +1360,8 @@ view: ga_finance {
 
       {% endif %}
 
-      </p>
-      </td>
 
-      <td style="text-align:center; line-height:1.0;width:200px;font-size:13px;">
-      <p>
-     {{ga_finance.target._rendered_value}}
-      </p>
       </td>
-
       </tr>
       </table>
 
@@ -1391,21 +1376,21 @@ view: ga_finance {
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.0;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height: 1.5;align:center;font-size:14px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
       <tr>
-      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-      <p >AVG.&ensp;SESSION&ensp;LENGTH<br style="line-height:1.5;"><b style="font-size:18px; ">{{ga_finance.SessionLength_selected_month._rendered_value}}</b>&nbsp;sec
-      </p>
+      <td style="text-align:LEFT;width:200px;padding-top: 10px;font-size:13px;padding-left:10px;">
+      AVG.&nbsp;SESSION&nbsp;LENGTH<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{ga_finance.SessionLength_selected_month._rendered_value}}</b>&nbsp;sec
       </td>
-      <td style="text-align:center;width:200px;padding-top: 15px;font-size:13px;">
-      <p >TARGET<br style="line-height:1.5;"><b style="font-size:18px;"></b>
-      </p>
+      <td style="text-align:center;width:200px;padding-top: 35px;font-size:14px;padding-left:55px;">
+      Target<br style="line-height:1.5;"><b style="font-size:15px;">
+      {{ga_finance.target1._rendered_value}}
+      </b>
       </td>
     </tr>
 
-      <tr style="line-height:1.5;">
-      <td style="text-align:LEFT; line-height:1.0;width:200px;font-size:13px;">
-      <p>
+      <tr>
+      <td style="text-align:LEFT; line-height:1.5;width:200px;font-size:13px;padding-left:10px;">
+
       {% if ga_finance.SessionLength_Growth._value >= 0 %}
 
       <font color="green"> ▲ {{ ga_finance.SessionLength_Growth._rendered_value }}</font>&nbsp; LM
@@ -1416,13 +1401,7 @@ view: ga_finance {
 
       {% endif %}
 
-      </p>
-      </td>
 
-      <td style="text-align:center; line-height:1.0;width:200px;font-size:13px;">
-      <p>
-     {{ga_finance.target1._rendered_value}}
-      </p>
       </td>
 
       </tr>
@@ -1439,21 +1418,21 @@ view: ga_finance {
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.0;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height:1.5;align:center;font-size:14px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
       <tr>
-      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-      <p >RETENTION&ensp;RATE<br style="line-height:1.5;"><b style="font-size:18px; ">{{ga_finance.Retention_Rate_selected_month._rendered_value}}</b>
-      </p>
+      <td style="text-align:LEFT;width:200px;padding-top: 10px;font-size:13px;padding-left:10px;">
+      RETENTION&nbsp;RATE<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{ga_finance.Retention_Rate_selected_month._rendered_value}}</b>
       </td>
-      <td style="text-align:center;width:200px;padding-top: 15px;font-size:13px;">
-      <p >TARGET<br style="line-height:1.5;"><b style="font-size:18px;"></b>
-      </p>
+      <td style="text-align:center;width:200px;padding-top: 35px;font-size:14px;padding-left:55px;">
+      Target<br style="line-height:1.5;"><b style="font-size:15px;">
+      {{ga_finance.target2._rendered_value}}
+      </b>
       </td>
     </tr>
 
-      <tr style="line-height:1.5;">
-      <td style="text-align:LEFT; line-height:1.0;width:200px;font-size:13px;">
-      <p>
+      <tr>
+      <td style="text-align:LEFT; line-height:1.0;width:200px;font-size:13px;padding-left:10px;">
+
       {% if ga_finance.Retention_Rate_Growth._value >= 0 %}
 
       <font color="green"> ▲ {{ ga_finance.Retention_Rate_Growth._rendered_value }}</font>&nbsp; LM
@@ -1464,13 +1443,6 @@ view: ga_finance {
 
       {% endif %}
 
-      </p>
-      </td>
-
-      <td style="text-align:center; line-height:1.0;width:200px;font-size:13px;">
-      <p>
-     {{ga_finance.target2._rendered_value}}
-      </p>
       </td>
 
       </tr>
@@ -1487,13 +1459,13 @@ view: ga_finance {
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.0;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height: 1.3;align:center;font-size:14px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
        <tr>
-      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-      <p >AVG.&ensp;SCREENS/VISIT<br style="line-height:1.5;"><b style="font-size:18px; ">{{ga_finance.ScreensVisits_selected_month._rendered_value}}</b>
+      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;padding-left:4px;">
+      <p >AVG.&nbsp;SCREENS / VISIT<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{ga_finance.ScreensVisits_selected_month._rendered_value}}</b>
       </p>
       </td>
-      <td style="text-align:center;width:200px;padding-top: 15px;">
+      <td style="text-align:center;width:200px;padding-top: 25px;font-size:13px;padding-left:40px;">
       <p>
       {% if ga_finance.ScreenVisits_Growth._value >= 0 %}
 
@@ -1525,13 +1497,13 @@ view: ga_finance {
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.0;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height: 1.3;align:center;font-size:14px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
        <tr>
-      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-      <p >AVG.&ensp;APP&ensp;OPEN&ensp;RATE<br style="line-height:1.5;"><b style="font-size:18px; ">{{ga_finance.AOR_selected_month._rendered_value}}</b>&nbsp;/Day
+      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;padding-left:5px;">
+      <p >AVG.&nbsp;APP&nbsp;OPEN&nbsp;RATE<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{ga_finance.AOR_selected_month._rendered_value}}</b>&nbsp;/Day
       </p>
       </td>
-      <td style="text-align:center;width:200px;padding-top: 15px;">
+      <td style="text-align:center;width:200px;padding-top: 25px;font-size:13px;padding-left:35px;">
       <p>
       {% if ga_finance.AOR_Growth._value >= 0 %}
 
@@ -1563,13 +1535,13 @@ view: ga_finance {
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.0;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height: 1.3;align:center;font-size:14px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
        <tr>
-      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-      <p >AVG.&ensp;PLAYTIME<br style="line-height:1.5;"><b style="font-size:18px; ">{{ga_finance.PlayTime_selected_month._rendered_value}}</b>&nbsp;sec
+      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;padding-left:4px;">
+      <p >AVG.&nbsp;PLAYTIME<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{ga_finance.PlayTime_selected_month._rendered_value}}</b>&nbsp;sec
       </p>
       </td>
-      <td style="text-align:center;width:200px;padding-top: 15px;">
+      <td style="text-align:center;width:200px;padding-top: 25px;font-size:13px;padding-left:55px;">
       <p>
       {% if ga_finance.PlayTime_Growth._value >= 0 %}
 
@@ -1600,13 +1572,13 @@ view: ga_finance {
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.0;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height: 1.3;align:center;font-size:14px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
        <tr>
-      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-      <p >AVG.&ensp;SESSION&ensp;DEPTH<br style="line-height:1.5;"><b style="font-size:18px; ">{{ga_finance.SessionDepth_selected_month._rendered_value}}</b>&nbsp;Levels
+      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;padding-left:4px;">
+      <p >AVG.&nbsp;SESSION&nbsp;DEPTH<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{ga_finance.SessionDepth_selected_month._rendered_value}}</b>&nbsp;Levels
       </p>
       </td>
-      <td style="text-align:center;width:200px;padding-top: 15px;">
+      <td style="text-align:center;width:200px;padding-top: 25px;font-size:13px;padding-left:40px;">
       <p>
       {% if ga_finance.SessionDepth_Growth._value >= 0 %}
 
@@ -1638,21 +1610,22 @@ view: ga_finance {
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.0;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height:1.5;align:center;font-size:14px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
       <tr>
-      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-      <p >CONVERSION&ensp;RATE<br style="line-height:1.5;"><b style="font-size:18px; ">{{ga_finance.Conversion_Rate_selected_month._rendered_value}}</b>
-      </p>
+      <td style="text-align:LEFT;width:200px;font-size:13px;padding-top:10px;padding-left:10px;">
+      CONVERSION&nbsp;RATE<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{ga_finance.Conversion_Rate_selected_month._rendered_value}}</b>
+
       </td>
-      <td style="text-align:center;width:200px;padding-top: 15px;font-size:13px;">
-      <p >TARGET<br style="line-height:1.5;"><b style="font-size:18px;"></b>
-      </p>
+      <td style="text-align:center;width:200px;padding-top: 35px;font-size:14px;padding-left:55px;">
+      Target<br style="line-height:1.5;"><b style="font-size:15px;">
+      {{marketing_br_adv_derived.Conversion_Rate_Target._rendered_value}}
+      </b>
       </td>
     </tr>
 
-      <tr style="line-height:1.5;">
-      <td style="text-align:LEFT; line-height:1.0;width:200px;font-size:13px;">
-      <p>
+      <tr>
+      <td style="text-align:LEFT; line-height:1.5;width:200px;font-size:13px;padding-left:10px;">
+
       {% if ga_finance.Conversion_Rate_Growth._value >= 0 %}
 
       <font color="green"> ▲ {{ ga_finance.Conversion_Rate_Growth._rendered_value }}</font>&nbsp; LM
@@ -1663,15 +1636,8 @@ view: ga_finance {
 
       {% endif %}
 
-      </p>
-      </td>
 
-      <td style="text-align:center; line-height:1.0;width:200px;font-size:13px;">
-      <p>
-      {{marketing_br_adv_derived.Conversion_Rate_Target._rendered_value}}
-      </p>
       </td>
-
       </tr>
       </table>
 
@@ -1685,21 +1651,22 @@ view: ga_finance {
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.0;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height:1.5;align:center;font-size:14px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
       <tr>
-      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-      <p >RETENTION&ensp;RATE<br style="line-height:1.5;"><b style="font-size:18px; ">{{ga_finance.Retention_Rate_selected_month._rendered_value}}</b>
-      </p>
+      <td style="text-align:LEFT;width:200px;padding-top:10px;font-size:13px;padding-left:10px;">
+      RETENTION&nbsp;RATE<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{ga_finance.Retention_Rate_selected_month._rendered_value}}</b>
+
       </td>
-      <td style="text-align:center;width:200px;padding-top: 15px;font-size:13px;">
-      <p >TARGET<br style="line-height:1.5;"><b style="font-size:18px;"></b>
-      </p>
+      <td style="text-align:center;width:200px;padding-top:35px;font-size:14px;padding-left:55px;">
+     Target<br style="line-height:2.0;"><b style="font-size:15px;">
+      {{marketing_br_adv_derived.Retention_Rate_Target._rendered_value}}
+      </b>
       </td>
     </tr>
 
-      <tr style="line-height:1.5;">
-      <td style="text-align:LEFT; line-height:1.0;width:200px;font-size:13px;">
-      <p>
+      <tr>
+      <td style="text-align:LEFT; line-height:1.0;width:200px;font-size:13px;padding-left:10px;">
+
       {% if ga_finance.Retention_Rate_Growth._value >= 0 %}
 
       <font color="green"> ▲ {{ ga_finance.Retention_Rate_Growth._rendered_value }}</font>&nbsp; LM
@@ -1710,15 +1677,8 @@ view: ga_finance {
 
       {% endif %}
 
-      </p>
-      </td>
 
-      <td style="text-align:center; line-height:1.0;width:200px;font-size:13px;">
-      <p>
-      {{marketing_br_adv_derived.Retention_Rate_Target._rendered_value}}
-      </p>
       </td>
-
       </tr>
       </table>
 
@@ -1732,21 +1692,22 @@ view: ga_finance {
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.0;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height: 1.5;align:center;font-size:14px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
       <tr>
-      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-      <p >K&ensp;FACTOR<br style="line-height:1.5;"><b style="font-size:18px; ">{{ga_finance.K_Factor_SelectedMonth._rendered_value}}</b>
-      </p>
+      <td style="text-align:LEFT;width:200px;padding-top:10px;font-size:13px;padding-left:10px;">
+       K&nbsp;FACTOR<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{ga_finance.K_Factor_SelectedMonth._rendered_value}}</b>
+
       </td>
-      <td style="text-align:center;width:200px;padding-top: 15px;font-size:13px;">
-      <p >TARGET<br style="line-height:1.5;"><b style="font-size:18px;"></b>
-      </p>
+      <td style="text-align:center;width:200px;padding-top: 35px;font-size:14px;padding-left:55px;">
+     Target<br style="line-height:1.5;"><b style="font-size:15px;">
+      {{marketing_br_adv_derived.K_Factor_Target._rendered_value}}
+    </b>
       </td>
     </tr>
 
-      <tr style="line-height:1.5;">
-      <td style="text-align:LEFT; line-height:1.0;width:200px;font-size:13px;">
-      <p>
+      <tr>
+      <td style="text-align:LEFT; line-height:1.5;width:200px;font-size:13px;padding-left:10px;">
+
       {% if ga_finance.K_Factor_Growth._value >= 0 %}
 
       <font color="green"> ▲ {{ ga_finance.K_Factor_Growth._rendered_value }}</font>&nbsp; LM
@@ -1757,15 +1718,8 @@ view: ga_finance {
 
       {% endif %}
 
-      </p>
-      </td>
 
-      <td style="text-align:center; line-height:1.0;width:200px;font-size:13px;">
-      <p>
-      {{marketing_br_adv_derived.K_Factor_Target._rendered_value}}
-      </p>
       </td>
-
       </tr>
       </table>
 
@@ -1780,13 +1734,13 @@ view: ga_finance {
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.0;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height: 1.3;align:center;font-size:14px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
       <tr>
-      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-      <p >VIEWS&ensp;TO&ensp;INSTALL<br style="line-height:1.5;"><b style="font-size:18px; ">{{ga_marketing.VTI_selected_month._rendered_value}}</b>
+      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;padding-left:5px;">
+      <p >VIEWS&nbsp;T0&nbsp;INSTALL<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{ga_marketing.VTI_selected_month._rendered_value}}</b>
       </p>
       </td>
-      <td style="text-align:center; line-height:1.0;width:200px;font-size:13px;">
+      <td style="text-align:center; line-height:1.0;width:200px;font-size:13px;padding-left:10px;padding-top:30px;">
       <p>
       {% if ga_marketing.VTI_Growth._value >= 0 %}
 
@@ -1812,13 +1766,13 @@ view: ga_finance {
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.0;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height: 1.3;align:center;font-size:14px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
       <tr>
-      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-      <p >USER&ensp;GROWTH&ensp;RATE<br style="line-height:1.5;"><b style="font-size:18px; ">{{ga_finance.UGR_Selected_Month._rendered_value}}</b>
+      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;padding-left:5px;">
+      <p >USER&nbsp;GROWTH&nbsp;RATE<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{ga_finance.UGR_Selected_Month._rendered_value}}</b>
       </p>
       </td>
-      <td style="text-align:center; line-height:1.0;width:200px;font-size:13px;">
+      <td style="text-align:center; line-height:1.0;width:200px;font-size:13px;padding-left:10px;padding-top:30px;">
       <p>
       {% if ga_finance.UGR_Growth._value >= 0 %}
 
@@ -1849,14 +1803,14 @@ view: ga_finance {
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.0;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height: 1.3;align:center;font-size:14px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
       <tr>
-      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-      <p >CONVERSION&ensp;RATE&ensp;BREAKDOWN<br style="line-height:1.5;"><b style="font-size:18px; ">{{ga_finance.PD_Conversion_Rate_TM._rendered_value}}</b><br> PAID
+      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;padding-left:5px;">
+      <p >CONVERSION&nbsp;RATE&nbsp;BREAKDOWN<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{ga_finance.PD_Conversion_Rate_TM._rendered_value}}</b><br> Paid
       </p>
       </td>
-      <td style="text-align:left;width:200px;padding-top: 15px;font-size:13px;">
-      <p ><br style="line-height:1.5;"><b style="font-size:18px; ">{{ga_finance.Org_Conversion_Rate_TM._rendered_value}}</b><br> ORGANIC
+      <td style="text-align:left;width:200px;padding-top: 15px;font-size:14px;padding-left:15px;">
+      <p ><br style="line-height:1.5;"><b style="font-size:29.5px; ">{{ga_finance.Org_Conversion_Rate_TM._rendered_value}}</b><br> Organic
       </p>
       </td>
 
@@ -1876,18 +1830,18 @@ view: ga_finance {
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.0;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height: 1.3;align:center;font-size:14px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
       <tr>
-      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-      <p >APP.&ensp;RANKING<br style="line-height:1.5;"><b style="font-size:18px; ">{{marketing_br_adv_derived.AppStore_Ranking_TM._rendered_value}}</b>/5<br> APP&ensp;STORE
+      <td style="text-align:LEFT;width:200px;padding-top:15px;font-size:13px;padding-left:5px;">
+      <p >APP.&nbsp;RANKING<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{marketing_br_adv_derived.AppStore_Ranking_TM._rendered_value}}</b>/5<br> App&nbsp;Store
       </p>
       </td>
-      <td style="text-align:left;width:200px;padding-top: 15px;font-size:13px;">
-      <p ><br style="line-height:1.5;"><b style="font-size:18px; ">{{marketing_br_adv_derived.MicrosoftStore_Ranking_TM._rendered_value}}</b>/5<br> PLAY&ensp;STORE
+      <td style="text-align:left;width:200px;padding-top:15px;font-size:14px;padding-left:11px;">
+      <p ><br style="line-height:1.5;"><b style="font-size:29.5px; ">{{marketing_br_adv_derived.MicrosoftStore_Ranking_TM._rendered_value}}</b>/5<br> Play&nbsp;Store
       </p>
       </td>
-      <td style="text-align:left;width:200px;padding-top: 15px;font-size:13px;">
-      <p ><br style="line-height:1.5;"><b style="font-size:18px; ">{{marketing_br_adv_derived.PlayStore_Ranking_TM._rendered_value}}</b>/5<br> MICROSOFT&ensp;STORE
+      <td style="text-left:left;width:200px;padding-top:15px;font-size:14px;padding-left:16px;">
+      <p ><br style="line-height:1.5;"><b style="font-size:29.5px; ">{{marketing_br_adv_derived.PlayStore_Ranking_TM._rendered_value}}</b>/5<br> Microsoft&nbsp;Store
       </p>
       </td>
       </tr>
@@ -1907,29 +1861,28 @@ measure:Overview_Revenue_tab{
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.0;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height:1.5;align:center;font-size:15px;padding-left: 15px;padding-top: 15px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
        <tr>
       <td style="text-align:center;width:200px;padding-top: 15px;font-size:13px;">
-      <p >REVENUE<br style="line-height:1.5;"><b style="font-size:18px; ">{{finance_revenue_stack_derived.Revenue_selected_month._rendered_value}}</b>
-      </p>
+      REVENUE<br style="line-height:1.5"><b style="font-size:29.5px; ">{{finance_revenue_stack_derived.Revenue_selected_month._rendered_value}}</b>
       </td>
       </tr>
-      <tr>
-      <td style="text-align:center;width:200px;padding-top: 15px;">
-      <p>
+      <tr style="line-height:1.0;">
+      <td style="text-align:center;width:200px;padding-bottom:15px;font-size:13px;">
+
       {% if finance_revenue_stack_derived.Revenue_Growth._value >= 0 %}
 
-      <font color="green"> ▲ {{ finance_revenue_stack_derived.Revenue_Growth._rendered_value }}</font>&nbsp;LM
+      <font color="green"> ▲ {{ finance_revenue_stack_derived.Revenue_Growth._rendered_value }}</font>&ensp;LM
 
       {% else %}
 
-      <font color="red"> ▼  {{ finance_revenue_stack_derived.Revenue_Growth._rendered_value }}</font>&nbsp;LM
+      <font color="red"> ▼  {{ finance_revenue_stack_derived.Revenue_Growth._rendered_value }}</font>&ensp;LM
 
       {% endif %}
 
-      </p>
 
-      </p>
+
+
       </td>
       </tr>
 
@@ -1946,29 +1899,29 @@ measure:Overview_Revenue_tab{
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.0;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height: 1.5;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
        <tr>
-      <td style="text-align:center;width:200px;padding-top: 15px;font-size:13px;">
-      <p >AVG.&ensp;REVENUE/USER<br style="line-height:1.5;"><b style="font-size:18px; ">{{ga_finance.ARPU_selected_month._rendered_value}}</b>
-      </p>
+      <td style="text-align:center;width:200px;padding-top: 15px;font-size:12.5px;">
+      AVG.&nbsp;REVENUE&nbsp;/&nbsp;USER<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{ga_finance.ARPU_selected_month._rendered_value}}</b>
+
       </td>
       </tr>
       <tr>
-      <td style="text-align:center;width:200px;padding-top: 15px;">
-      <p>
+      <td style="text-align:center;width:200px;padding-bottom: 13px;font-size:13px;">
+
       {% if ga_finance.ARPU_Growth._value >= 0 %}
 
-      <font color="green"> ▲ {{ ga_finance.ARPU_Growth._rendered_value }}</font>&nbsp;LM
+      <font color="green"> ▲ {{ ga_finance.ARPU_Growth._rendered_value }}</font>&ensp;LM
 
       {% else %}
 
-      <font color="red"> ▼  {{ ga_finance.ARPU_Growth._rendered_value }}</font>&nbsp;LM
+      <font color="red"> ▼  {{ ga_finance.ARPU_Growth._rendered_value }}</font>&ensp;LM
 
       {% endif %}
 
-      </p>
 
-      </p>
+
+
       </td>
       </tr>
 
@@ -1986,29 +1939,27 @@ measure:Overview_Revenue_tab{
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.0;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height: 1.5;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
        <tr>
       <td style="text-align:center;width:200px;padding-top: 15px;font-size:13px;">
-      <p >INSTALLS<br style="line-height:1.5;"><b style="font-size:18px; ">{{ga_finance.Installs_selected_month._rendered_value}}</b>
-      </p>
+     INSTALLS<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{ga_finance.Installs_selected_month._rendered_value}}</b>
+
       </td>
       </tr>
       <tr>
-      <td style="text-align:center;width:200px;padding-top: 15px;">
-      <p>
+      <td style="text-align:center;width:200px;padding-bottom: 15px;font-size:13px;">
+
       {% if ga_finance.Installs_Growth._value >= 0 %}
 
-      <font color="green"> ▲ {{ ga_finance.Installs_Growth._rendered_value }}</font>&nbsp;LM
+      <font color="green"> ▲ {{ ga_finance.Installs_Growth._rendered_value }}</font>&ensp;LM
 
       {% else %}
 
-      <font color="red"> ▼  {{ ga_finance.Installs_Growth._rendered_value }}</font>&nbsp;LM
+      <font color="red"> ▼  {{ ga_finance.Installs_Growth._rendered_value }}</font>&ensp;LM
 
       {% endif %}
 
-      </p>
 
-      </p>
       </td>
       </tr>
 
@@ -2025,29 +1976,27 @@ measure:Overview_Revenue_tab{
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.0;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height: 1.5;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
        <tr>
       <td style="text-align:center;width:200px;padding-top: 15px;font-size:13px;">
-      <p >UNINSTALLS<br style="line-height:1.5;"><b style="font-size:18px; ">{{ga_churn_rate_causes.Uninstalls_selected_month._rendered_value}}</b>
-      </p>
+      UNINSTALLS<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{ga_churn_rate_causes.Uninstalls_selected_month._rendered_value}}</b>
+
       </td>
       </tr>
       <tr>
-      <td style="text-align:center;width:200px;padding-top: 15px;">
-      <p>
+      <td style="text-align:center;width:200px;padding-bottom: 15px;font-size:13px;">
+
       {% if ga_churn_rate_causes.Uninstalls_Growth._value >= 0 %}
 
-      <font color="green"> ▲ {{ ga_churn_rate_causes.Uninstalls_Growth._rendered_value }}</font>&nbsp;LM
+      <font color="green"> ▲ {{ ga_churn_rate_causes.Uninstalls_Growth._rendered_value }}</font>&ensp;LM
 
       {% else %}
 
-      <font color="red"> ▼  {{ ga_finance.Installs_Growth._rendered_value }}</font>&nbsp;LM
+      <font color="red"> ▼  {{ ga_finance.Installs_Growth._rendered_value }}</font>&ensp;LM
 
       {% endif %}
 
-      </p>
 
-      </p>
       </td>
       </tr>
 
@@ -2055,6 +2004,47 @@ measure:Overview_Revenue_tab{
       </table>
 
       </body>
+      </html>
+      ;;
+  }
+
+
+  dimension: finance_revenue_header {
+    sql: 1 ;;
+    html:
+      <html>
+      <h1 style="color:black;background-color:#ffffff;font-size: 15pt; margin:10px auto;text-align:left;border-radius: 10px;">Revenue &nbsp;
+      </h1>
+      </html>
+      ;;
+  }
+
+  dimension: finance_quick_stats_header {
+    sql: 1 ;;
+    html:
+      <html>
+      <h1 style="color:black;background-color:#ffffff;font-size: 15pt; margin:10px auto;text-align:left;border-radius: 10px;">Quick Stats &nbsp;
+      </h1>
+      </html>
+      ;;
+  }
+
+  dimension: finance_revenue_stack_header {
+    sql: 1 ;;
+    html:
+      <html>
+      <h1 style="color:black;background-color:#ffffff;font-size: 15pt; margin:10px auto;text-align:left;border-radius: 10px;">Revenue Stack &nbsp;
+      </h1>
+      </html>
+      ;;
+  }
+
+  dimension: finance_details_header_finance {
+    sql: 1 ;;
+    html:
+      <html>
+      <h1 style="color:black;background-color:#ffffff;font-size: 15pt; margin:10px auto;text-align:left;border-radius: 10px;">Finance Details &nbsp;
+      </h1>
       </html>
       ;;
   }

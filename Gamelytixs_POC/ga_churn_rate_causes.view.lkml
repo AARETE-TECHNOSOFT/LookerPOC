@@ -176,30 +176,31 @@ view: ga_churn_rate_causes {
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.5;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="position:fixed;width:100%;height:50%;line-height: 1.3;align:center;font-size:14px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
 
       <tr>
-      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-       <p ><font color="#265780">● &ensp;</font>ABUSIVE IN-GAME MESSAGES<br style="line-height:1.5;"><b style="font-size:18px; ">{{ga_churn_rate_causes.AM_Percent_Total1._rendered_value}}</b>
+      <td style="text-align:LEFT;width:200px;padding-top: 5px;font-size:14px;padding-left:10px;">
+      <p>
+       <font color="#00cecb">● &ensp;</font>Abusive&nbsp;In-Game&nbsp;Messages<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{ga_churn_rate_causes.AM_Percent_Total1._rendered_value}}</b>
       </p>
       </td>
-      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-      <p ><font color="#33992E">● &ensp;</font>HIGH&ensp;LATENCY<br style="line-height:1.5;"><b style="font-size:18px;">{{ga_churn_rate_causes.AM_Percent_Total2._rendered_value}}</b>
-      </p>
+      <td style="text-align:LEFT;width:200px;padding-top: 5px;font-size:14px;padding-left:20px;">
+      <p><font color="#F5A50A">● &ensp;</font>High&nbsp;Latency<br style="line-height:1.5;"><b style="font-size:29.5px;">{{ga_churn_rate_causes.AM_Percent_Total2._rendered_value}}</b>
+     </p>
       </td>
      </tr>
       <tr>
-      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-      <p ><font color="#E5C877">● &ensp;</font>POOR&ensp;GAMEPLAY&ensp;BALANCE<br style="line-height:1.5;"><b style="font-size:18px; ">{{ga_churn_rate_causes.AM_Percent_Total3._rendered_value}}</b>
+      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:14px;padding-left:10px;">
+     <p ><font color="#ed6168">● &ensp;</font>Poor&nbsp;Gameplay&nbsp;Balance<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{ga_churn_rate_causes.AM_Percent_Total3._rendered_value}}</b>
       </p>
       </td>
-      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-      <p ><font color="#62bad4">● &ensp;</font>EXHAUSTIVE&ensp;UPDATES<br style="line-height:1.5;"><b style="font-size:18px;">{{ga_churn_rate_causes.AM_Percent_Total4._rendered_value}}</b>
+      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:14px;padding-left:20px;">
+     <p ><font color="#3388ff   ">● &ensp;</font>Exhaustive&nbsp;Updates<br style="line-height:1.5;"><b style="font-size:29.5px;">{{ga_churn_rate_causes.AM_Percent_Total4._rendered_value}}</b>
       </p>
       </td>
       <tr>
-      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-      <p ><font color="#EE7772">● &ensp;</font>DISENGAGING&ensp;TUTORIAL<br style="line-height:1.5;"><b style="font-size:18px;">{{ga_churn_rate_causes.AM_Percent_Total5._rendered_value}}</b>
+      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:14px;padding-left:10px;">
+      <p ><font color="#508637">● &ensp;</font>Disengaging&nbsp;Tutorial<br style="line-height:1.5;"><b style="font-size:29.5px;">{{ga_churn_rate_causes.AM_Percent_Total5._rendered_value}}</b>
       </p>
       </td>
       </tr>
@@ -208,5 +209,7 @@ view: ga_churn_rate_causes {
       </html>
       ;;
   }
+
+
 
 }
