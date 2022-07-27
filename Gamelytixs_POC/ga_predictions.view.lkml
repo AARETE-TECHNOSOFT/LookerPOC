@@ -116,37 +116,46 @@ view: ga_predictions {
     html:
     <html>
     <body>
-         <h1 style="color:black;background-color:#ffffff;font-size: 10pt; margin:10px auto;text-align:LEFT; padding-left: 20px;border-radius: 10px;padding-top: 0px;"><b style="font-size:35px; ">{{ga_dim_date.date__quarter._rendered_value}} &nbsp;<img src="https://img.icons8.com/office/16/000000/circled-right-2.png" width="15" height="15" margin-bottom="40" /></b></h1>
+
+        <h1 style="color:black;line-height:0.5;font-size: 14pt; margin:20px auto;text-align:left; padding-left: 20px;border-radius: 10px;padding-top: 10px;padding-bottom:10px;"><b style="font-size:36px; ">{{ga_dim_date.date__quarter._rendered_value}} &nbsp;</b></h1>
+
         <hr>
-      <table style="width:100%;height:50%;line-height: 1.5;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height: 1.0;align:left;font-size:13px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
 
 
-      <tr style="line-height: 1.5;font-size: 13pt;border-radius: 10px;background-color:#ffffff;">
+      <tr style="line-height: 1.0;font-size: 12pt;border-radius: 10px;background-color:#ffffff;">
       <td style="text-align:center;width:200px;">
-      <p >
-      <img src="https://img.icons8.com/color/48/undefined/circled-down-right-2.png" width="30" height="35" margin-bottom="40" style="padding-bottom:8px;"/>CAGR<br style="line-height:1.0;font-size: 10pt;text-align:left;"><b style="font-size:20px; ">{{ga_predictions.CAGR_AVG._rendered_value}}</b>
+
+      <img src="https://www.linkpicture.com/q/arrow-growth.svg" width="30" height="35" margin-bottom="40" style="padding-bottom:8px;align:left"/>&nbsp;CAGR<br style="line-height:1.0;font-size: 8pt;text-align:left;"><b style="font-size:29.5px; ">{{ga_predictions.CAGR_AVG._rendered_value}}</b>
+
+      </td>
+      <td style="text-align:center;width:200px;">
+      <p ><img src="https://www.linkpicture.com/q/user.svg" width="30" height="30" margin-bottom="40" style="padding-bottom:8px;"/>&nbsp;New Users<br style="line-height:1.0;font-size:8pt;"><b style="font-size:29.5px; ">{{ga_predictions.Sum_newusers._rendered_value}}</b>
       </p>
       </td>
       <td style="text-align:center;width:200px;">
-      <p ><img src="https://img.icons8.com/ultraviolet/40/000000/conference.png" width="30" height="35" margin-bottom="40" style="padding-bottom:8px;"/>&nbsp;NEW USERS<br style="line-height:1.0;font-size: 10pt;"><b style="font-size:20px; ">{{ga_predictions.Sum_newusers._rendered_value}}</b>
-      </p>
-      </td>
-      <td style="text-align:center;width:200px;">
-      <p ><img src="https://img.icons8.com/ultraviolet/40/000000/database-restore.png" width="30" height="35" margin-bottom="40" style="padding-bottom:8px;" />&nbsp;REVENUE<br style="line-height:1.0;font-size: 10pt;"><b style="font-size:20px; ">{{ga_predictions.Sum_Revenue._rendered_value}}</b>
+      <p ><img src="https://www.linkpicture.com/q/coins.svg" width="30" height="30" margin-bottom="40" style="padding-bottom:8px;" />&nbsp;Revenue<br style="line-height:1.0;font-size:8pt;"><b style="font-size:29.5px; ">{{ga_predictions.Sum_Revenue._rendered_value}}</b>
       </p>
       </td>
 
-      <tr style="line-height: 2.0;font-size: 13pt;border-radius: 10px;background-color:#ffffff;">
+
+      <tr style="line-height: 1.0;font-size: 12pt;border-radius: 10px;background-color:#ffffff;">
       <td style="text-align:center;width:200px;">
-      <p > <img src="https://img.icons8.com/ultraviolet/40/000000/add-user-male.png" width="30" height="35" style="padding-bottom:8px;"/>&nbsp;RETENTION RATE<br style="line-height:1.0;font-size: 10pt;"><b style="font-size:20px; ">{{ga_predictions.AVG_Rentenion_Rate._rendered_value}}</b>
+      <br>
+
+      <p > <img src="https://www.linkpicture.com/q/user-plus.svg" width="30" height="30" margin-bottom="40" style="padding-bottom:8px;"/>&nbsp;Retention Rate<br style="line-height:1.0;font-size:8pt;"><b style="font-size:29.5px; ">{{ga_predictions.AVG_Rentenion_Rate._rendered_value}}</b>
       </p>
       </td>
       <td style="text-align:center;width:200px;">
-      <p ><img src="https://img.icons8.com/ultraviolet/40/000000/combo-chart.png" width="30" height="35" margin-bottom="40" style="padding-bottom:8px;" />&nbsp;CHURN RATE<br style="line-height:1.0;font-size: 10pt;"><b style="font-size:20px; ">{{ga_predictions.AVG_Churn_Rate._rendered_value}}</b>
+      <br>
+
+      <p ><img src="https://www.linkpicture.com/q/chart-line.svg" width="30" height="30" margin-bottom="40" style="padding-bottom:8px;" />&nbsp;Churn Rate<br style="line-height:1.0;font-size: 8pt;"><b style="font-size:29.5px; ">{{ga_predictions.AVG_Churn_Rate._rendered_value}}</b>
       </p>
       </td>
       <td style="text-align:center;width:200px;">
-      <p ><img src="https://img.icons8.com/ultraviolet/40/000000/refresh--v1.png" width="30" height="35" style="padding-bottom:5px;" style="padding-bottom:8px;"/>&nbsp;PROFIT<br style="line-height:1.0;font-size: 10pt;"><b style="font-size:20px; ">{{ga_predictions.Sum_profit._rendered_value}}</b>
+      <br>
+
+      <p ><img src="https://www.linkpicture.com/q/process.svg" width="30" height="30" margin-bottom="40" style="padding-bottom:8px;"/>&nbsp;Profit<br style="line-height:1.0;font-size: 13pt;"><b style="font-size:29.5px; ">{{ga_predictions.Sum_profit._rendered_value}}</b>
       </p>
       </td>
       </tr>

@@ -474,15 +474,15 @@ measure: Load_Time_LM{
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.5;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height: 1.5;align:center;font-size:14px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
       <tr>
-      <td style="text-align:center;width:200px;padding-top: 15px;">
-      <p >CRASHES<br style="line-height:1.5;"><b style="font-size:20px; ">{{game_experience_derived.Crashes_selected_month._rendered_value}}</b>
-      </p>
+      <td style="text-align:center;width:200px;padding-top: 15px;font-size:13px;">
+      CRASHES<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{game_experience_derived.Crashes_selected_month._rendered_value}}</b>
+
       </td>
-      <td style="text-align:center;width:200px;padding-top: 15px;">
-      <p >ENGAGEMENT&ensp;INDEX<br style="line-height:1.5;"><b style="font-size:20px;">{{game_experience_derived.EI_selected_month._rendered_value}}</b>
-      </p>
+      <td style="text-align:center;width:200px;padding-top: 15px;font-size:13px;">
+     ENGAGEMENT&nbsp;INDEX<br style="line-height:1.5;"><b style="font-size:29.5px;">{{game_experience_derived.EI_selected_month._rendered_value}}</b>
+
       </td>
      </tr>
 
@@ -533,21 +533,21 @@ measure: Load_Time_LM{
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.0;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height:1.5;align:center;font-size:14px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
        <tr>
-      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-      <p >DEVICES<br style="line-height:1.5;"><b style="font-size:18px; ">{{game_experience_derived.devices_selected_month._rendered_value}}</b>
-      </p>
-      </td>
-      <td style="text-align:center;width:200px;padding-top: 15px;font-size:13px;">
-      <p >TARGET<br style="line-height:1.5;"><b style="font-size:18px;"></b>
-      </p>
+      <td style="text-align:LEFT;width:200px;padding-top: 10px;font-size:13px;padding-left:10px;">
+      DEVICES<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{game_experience_derived.devices_selected_month._rendered_value}}</b>
+     </td>
+      <td style="text-align:center;width:200px;padding-top: 40px;font-size:14px;padding-left:55px;">
+      Target<br style="line-height:1.5;"><b style="font-size:15px;">
+      {{ game_experience_derived.target._rendered_value }}
+      </b>
       </td>
      </tr>
 
-      <tr style="line-height:1.5;">
-      <td style="text-align:LEFT; line-height:1.0;width:200px;font-size:13px;">
-      <p>
+      <tr>
+      <td style="text-align:LEFT; line-height:1.5;width:200px;font-size:13px;padding-left:10px;">
+
       {% if game_experience_derived.Devices_Growth._value >= 0 %}
 
       <font color="green"> ▲ {{ game_experience_derived.Devices_Growth._rendered_value }}</font>&nbsp; LM
@@ -558,13 +558,7 @@ measure: Load_Time_LM{
 
       {% endif %}
 
-      </p>
-      </td>
 
-      <td style="text-align:center; line-height:1.0;width:200px;font-size:13px;">
-      <p>
-      {{ game_experience_derived.target._rendered_value }}
-      </p>
       </td>
 
       </tr>
@@ -580,21 +574,22 @@ measure: Load_Time_LM{
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.0;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height:1.5;align:center;font-size:13px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
        <tr>
-      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-      <p >AVG.&ensp;LOAD&ensp;TIME<br style="line-height:1.5;"><b style="font-size:18px; ">{{game_experience_derived.Load_selected_month._rendered_value}}</b>&nbsp;Sec
-      </p>
+      <td style="text-align:LEFT;width:200px;padding-top:10px;font-size:13px;padding-left:10px;">
+      AVG.&nbsp;LOAD&nbsp;TIME<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{game_experience_derived.Load_selected_month._rendered_value}}</b>&nbsp;Sec
+
       </td>
-      <td style="text-align:center;width:200px;padding-top: 15px;font-size:13px;">
-      <p >API&ensp;LATENCY<br style="line-height:1.5;"><b style="font-size:18px;"></b>
-      </p>
+      <td style="text-align:center;width:200px;padding-top: 40px;font-size:14px;padding-left:55px;">
+      API&nbsp;Latency<br style="line-height:1.5;"><b style="font-size:15px;">
+       {{ game_experience_derived.API_Latency_Rate._rendered_value }}
+      </b>
       </td>
      </tr>
 
-      <tr style="line-height:1.5;">
-      <td style="text-align:LEFT; line-height:1.0;width:200px;font-size:13px;">
-      <p>
+      <tr>
+      <td style="text-align:LEFT; line-height:1.5;width:200px;font-size:13px;padding-left:10px;">
+
       {% if game_experience_derived.Load_Time_Growth._value >= 0 %}
 
       <font color="green"> ▲ {{ game_experience_derived.Load_Time_Growth._rendered_value }}</font>&nbsp; LM
@@ -605,13 +600,7 @@ measure: Load_Time_LM{
 
       {% endif %}
 
-      </p>
-      </td>
 
-      <td style="text-align:center; line-height:1.0;width:200px;font-size:13px;">
-      <p>
-      {{ game_experience_derived.API_Latency_Rate._rendered_value }}
-      </p>
       </td>
 
       </tr>
@@ -627,21 +616,21 @@ measure: Load_Time_LM{
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.0;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height:1.5;align:center;font-size:14px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
        <tr>
-      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-      <p >CRASHES<br style="line-height:1.5;"><b style="font-size:18px; ">{{game_experience_derived.Crashes_selected_month._rendered_value}}</b>&nbsp;/Day
-      </p>
+      <td style="text-align:LEFT;width:200px;padding-top:10px;font-size:13px;padding-left:10px;">
+      CRASHES<br style="line-height:1.5;"><b style="font-size:34px; ">{{game_experience_derived.Crashes_selected_month._rendered_value}}</b>&nbsp;/ Day
       </td>
-      <td style="text-align:center;width:200px;padding-top: 15px;font-size:13px;">
-      <p >TARGET<br style="line-height:1.5;"><b style="font-size:18px;"></b>
-      </p>
+      <td style="text-align:center;width:200px;padding-top: 40px;font-size:14px;padding-left:55px;">
+      Target<br style="line-height:1.5;"><b style="font-size:15px;">
+       {{ game_experience_derived.Crashes_Target._rendered_value }}&nbsp;/ Day
+      </b>
       </td>
      </tr>
 
-      <tr style="line-height:1.5;">
-      <td style="text-align:LEFT; line-height:1.0;width:200px;font-size:13px;">
-      <p>
+      <tr>
+      <td style="text-align:LEFT; line-height:1.5;width:200px;font-size:13px;padding-left:10px;">
+
       {% if game_experience_derived.Crashes_Growth._value >= 0 %}
 
       <font color="green"> ▲ {{ game_experience_derived.Crashes_Growth._rendered_value }}</font>&nbsp; LM
@@ -652,13 +641,7 @@ measure: Load_Time_LM{
 
       {% endif %}
 
-      </p>
-      </td>
 
-      <td style="text-align:center; line-height:1.0;width:200px;font-size:13px;">
-      <p>
-      {{ game_experience_derived.Crashes_Target._rendered_value }}&nbsp;/Day
-      </p>
       </td>
 
       </tr>
@@ -674,20 +657,21 @@ measure: Load_Time_LM{
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.0;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height:1.5;align:center;font-size:14px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
        <tr>
-      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-      <p >ENGAGEMENT&ensp;INDEX<br style="line-height:1.5;"><b style="font-size:18px; ">{{game_experience_derived.EI_selected_month._rendered_value}}</b>
-      </p>
+      <td style="text-align:LEFT;width:200px;padding-top:10px;font-size:13px;padding-left:10px;">
+       ENGAGEMENT&nbsp;INDEX<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{game_experience_derived.EI_selected_month._rendered_value}}</b>
+
       </td>
-      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-      <p >TARGET<br style="line-height:1.5;"><b style="font-size:18px;"></b>
-      </p>
+      <td style="text-align:center;width:200px;padding-top: 40px;font-size:14px;padding-left:55px;">
+       Target<br style="line-height:1.5;"><b style="font-size:15px;">
+           {{ ga_finance.Target2._rendered_value }}
+      </b>
       </td>
      </tr>
 
-      <tr style="line-height:1.5;">
-      <td style="text-align:LEFT; line-height:1.0;width:200px;font-size:13px;">
+      <tr>
+      <td style="text-align:LEFT; line-height:1.5;width:200px;font-size:13px;padding-left:10px;">
       <p>
       {% if game_experience_derived.EI_Growth._value >= 0 %}
 
@@ -699,12 +683,6 @@ measure: Load_Time_LM{
 
       {% endif %}
 
-      </p>
-      </td>
-
-      <td style="text-align:LEFT; line-height:1.0;width:200px;font-size:13px;">
-      <p>
-      {{ ga_finance.Target2._rendered_value }}
       </p>
       </td>
 
@@ -721,13 +699,13 @@ measure: Load_Time_LM{
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.0;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height: 1.3;align:center;font-size:14px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
        <tr>
-      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-      <p >AVG.&ensp;CLICKS/SCREEN<br style="line-height:1.5;"><b style="font-size:18px; ">{{game_experience_derived.Avg_selected_month._rendered_value}}</b>
+      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;padding-left:5px;">
+      <p >AVG.&nbsp;CLICKS / SCREEN<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{game_experience_derived.Avg_selected_month._rendered_value}}</b>
       </p>
       </td>
-      <td style="text-align:center;width:200px;padding-top: 15px;">
+      <td style="text-align:center;width:200px;padding-top: 35px;padding-left:25px;font-size:13px;">
       <p>
       {% if game_experience_derived.Avg_Clicks_Growth._value >= 0 %}
 
@@ -758,13 +736,13 @@ measure: Load_Time_LM{
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.0;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height: 1.3;align:center;font-size:14px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
        <tr>
-      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-      <p >WIN&ensp;PERCENTAGE<br style="line-height:1.5;"><b style="font-size:18px; ">{{game_experience_derived.Win_Percentage_selected_month._rendered_value}}</b>
+      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;padding-left:5px;">
+      <p >WIN&nbsp;PERCENTAGE<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{game_experience_derived.Win_Percentage_selected_month._rendered_value}}</b>
       </p>
       </td>
-      <td style="text-align:center;width:200px;padding-top: 15px;">
+      <td style="text-align:center;width:200px;padding-top:35px;padding-left:30px;font-size:13px;">
       <p>
       {% if game_experience_derived.Win_Percentage_Growth._value >= 0 %}
 
@@ -795,18 +773,18 @@ measure: Load_Time_LM{
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.0;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height: 1.3;align:center;font-size:14px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
        <tr>
-      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-      <p >LEVEL&ensp;STATISTICS<br style="line-height:1.5;"><b style="font-size:18px; ">{{game_experience_derived.Level_Starts_This_Month._rendered_value}}</b><br style="line-height:1.5;">START
+      <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;padding-left:4px;">
+      <p >LEVEL&nbsp;STATISTICS<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{game_experience_derived.Level_Starts_This_Month._rendered_value}}</b><br style="line-height:1.5;">&nbsp;Start
       </p>
       </td>
-       <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;">
-      <p ><br style="line-height:1.5;"><b style="font-size:18px; ">{{game_experience_derived.Level_Fail_This_Month._rendered_value}}</b><br style="line-height:1.5;">FAIL
+       <td style="text-align:left;width:200px;padding-top: 15px;font-size:14px;padding-left:4px;">
+      <p ><br style="line-height:1.5;"><b style="font-size:29.5px; ">&ensp;{{game_experience_derived.Level_Fail_This_Month._rendered_value}}</b><br style="line-height:1.5;">&emsp;&ensp;Fail
       </p>
       </td>
-       <td style="text-align:center;width:200px;padding-top: 15px;font-size:13px;">
-      <p ><br style="line-height:1.5;"><b style="font-size:18px; ">{{game_experience_derived.Level_Completes_This_Month._rendered_value}}</b><br style="line-height:1.5;">COMPLETE
+       <td style="text-align:center;width:200px;padding-top: 15px;font-size:14px;padding-left:12px;">
+      <p ><br style="line-height:1.5;"><b style="font-size:29.5px; ">{{game_experience_derived.Level_Completes_This_Month._rendered_value}}</b><br style="line-height:1.5;">Complete
       </p>
       </td>
       </tr>
@@ -824,15 +802,15 @@ measure: Load_Time_LM{
     html:
     <html>
     <body>
-      <table style="width:100%;height:50%;line-height: 1.0;align:center;font-size:15px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
+      <table style="width:100%;height:50%;line-height: 1.0;align:center;font-size:14px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
       <tr style="line-height:1.0">
 
-      <td style="text-align:LEFT; line-height:1.0;width:200px;font-size:13px;">AVG.&ensp;LEVEL <br> SCORES
+      <td style="text-align:LEFT; line-height:1.0;width:200px;font-size:13px;">AVG.&nbsp;LEVEL <br> SCORES
       </td>
       </tr>
       <tr>
-      <td style="text-align:LEFT;width:200px;line-height:1.0;padding-top: 15px;font-size:13px;">
-      <p ><b style="font-size:18px; ">{{game_experience_derived.Level_Fail_selected_month._rendered_value}}</b><br style="line-height:1.5;">FAIL
+      <td style="text-align:LEFT;width:200px;line-height:1.0;padding-top: 30px;font-size:14px;padding-left:5px;">
+      <p ><b style="font-size:29.5px; ">{{game_experience_derived.Level_Fail_selected_month._rendered_value}}</b><br style="line-height:1.5;">Fail
       </p>
       </td>
       <td style="text-align:LEFT; line-height:3.5;width:200px;font-size:13px;">
@@ -850,12 +828,12 @@ measure: Load_Time_LM{
       </p>
       </td>
 
-       <td style="text-align:center; line-height:1.0;width:200px;font-size:13px;">
-      <p><br style="line-height:1.5;"><b style="font-size:18px; ">
-      {{ game_experience_derived.Level_Complete_selected_month._rendered_value }}<br style="line-height:1.5;"></b>COMPLETE
+       <td style="text-align:center; line-height:1.0;width:200px;font-size:14px;">
+      <p><br style="line-height:1.5;"><b style="font-size:29.5px; ">
+      {{ game_experience_derived.Level_Complete_selected_month._rendered_value }}<br style="line-height:1.5;"></b>Complete
       </p>
       </td>
-      <td style="text-align:center; line-height:1.0;width:200px;font-size:13px;">
+      <td style="text-align:center; line-height:1.0;width:200px;font-size:13px;padding-top:30px;">
       <p>
       {% if game_experience_derived.Level_Complete_Scores_Growth._value >= 0 %}
 
