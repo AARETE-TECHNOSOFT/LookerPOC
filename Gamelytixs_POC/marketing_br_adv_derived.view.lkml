@@ -530,7 +530,7 @@ view: marketing_br_adv_derived {
       <font style="font-size:10pt;">BRAND&nbsp;REACH</font><br style="line-height:1.5;font-size:10px;"><b style="font-size:29.5px;">{{marketing_br_adv_derived.Total_Reach_selectedMonth._rendered_value}}</b>
 
       </td>
-      <td style="text-align:center;width:200px;font-size: 10pt;">
+      <td style="text-align:center;width:200px;font-size: 13pt;">
       <br style="line-height:1.0;">
       <img src="https://img.icons8.com/color/48/000000/facebook-circled--v1.png" width="25" height="25"/>
 
