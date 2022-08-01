@@ -841,24 +841,24 @@ dimension: finance_header_overview {
                            </p>
                      </td>
                       <td style="text-align:center;width:200px;padding-top:10px;">
-                          <p><a href="https://thirdi.looker.com/dashboards/150?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" target="_blank" style="color:black;">
+                          <p><a href="https://thirdi.looker.com/dashboards/174?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" target="_blank" style="color:black;">
                          <img src="https://www.linkpicture.com/q/stock-exchange-app.png" style="width:25px;height:25px;align:left;float:center;margin-right:3px;" />&ensp;Finance</a>
                           </p>
                       </td>
                      <td  style="text-align:center;width:200px;padding-top:10px;">
-                          <p><a href="https://thirdi.looker.com/dashboards/151?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" target="_blank" style="color:black">
+                          <p><a href="https://thirdi.looker.com/dashboards/175?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" target="_blank" style="color:black">
                           <img src="https://www.linkpicture.com/q/users_2.png" style="width:25px;height:25px;align:left;float:center;margin-right:3px;" />&ensp;User Engagement</a>
                           </p>
                       </td>
 
                        <td  style="text-align:center;width:200px;padding-top:10px;">
-                           <p><a href="https://thirdi.looker.com/dashboards/152?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" target="_blank" style="color:black">
+                           <p><a href="https://thirdi.looker.com/dashboards/176?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" target="_blank" style="color:black">
                            <img src="https://www.linkpicture.com/q/game.png" style="width:25px;height:25px;align:left;float:center;margin-right:3px;" />&ensp;Game Experience</a>
                           </p>
                        </td>
 
                        <td  style="text-align:center;width:200px;padding-top:10px;">
-                           <p><a href="https://thirdi.looker.com/dashboards/154?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}"target="_blank" style="color:black">
+                           <p><a href="https://thirdi.looker.com/dashboards/177?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}"target="_blank" style="color:black">
                            <img src="https://www.linkpicture.com/q/speaker_1.png" style="width:25px;height:25px;align:left;float:center;margin-right:3px;" />&ensp;Marketing</a>
                           </p>
                        </td>
@@ -881,7 +881,7 @@ dimension: finance_header_overview {
                      <table style="width:100%;height:50%;align:center;font-size:20px;padding-left: 30px;padding-top: 20px;padding-bottom: 5px;" >
                        <tr>
                             <td style="text-align:center; width:200px;padding-top:10px;">
-                                <p><a href="https://thirdi.looker.com/dashboards/149?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" target="_blank" style="color:black;">
+                                <p><a href="https://thirdi.looker.com/dashboards/173?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" target="_blank" style="color:black;">
                                <img src="https://www.linkpicture.com/q/eye_1.png" style="width:25px;height:25px;align:left;float:center;margin-right:3px;" />&ensp;Overview</a></p>
                             </td>
 
@@ -893,17 +893,17 @@ dimension: finance_header_overview {
 
 
                            <td  style="text-align:center; width:200px;padding-top:10px;">
-                                <p><a href="https://thirdi.looker.com/dashboards/151?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" target="_blank" style="color:black">
+                                <p><a href="https://thirdi.looker.com/dashboards/175?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" target="_blank" style="color:black">
                                <img src="https://www.linkpicture.com/q/users_2.png" style="width:25px;height:25px;align:left;float:center;margin-right:3px;" />&ensp;User Engagement</a></p>
                             </td>
 
                            <td  style="text-align:center; width:200px;padding-top:10px;">
-                           <p><a href="https://thirdi.looker.com/dashboards/152?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" target="_blank" style="color:black">
+                           <p><a href="https://thirdi.looker.com/dashboards/176?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" target="_blank" style="color:black">
                           <img src="https://www.linkpicture.com/q/game.png" style="width:25px;height:25px;align:left;float:center;margin-right:3px;" />&ensp;Game Experience</a></p>
                            </td>
 
                             <td  style="text-align:center; width:200px;padding-top:10px;">
-                            <p><a href="https://thirdi.looker.com/dashboards/154?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}"target="_blank" style="color:black">
+                            <p><a href="https://thirdi.looker.com/dashboards/177?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}"target="_blank" style="color:black">
                             <img src="https://www.linkpicture.com/q/speaker_1.png" style="width:25px;height:25px;align:left;float:center;margin-right:3px;" />&ensp;Marketing</a></p>
                             </td>
       </tr>
@@ -923,12 +923,12 @@ dimension: finance_header_overview {
                      <table style="width:100%;height:50%;align:center;font-size:20px;padding-left: 30px;padding-top: 20px;padding-bottom: 5px;" >
                        <tr>
                             <td style="text-align:center; width:200px;padding-top:10px;">
-                                <p><a href="https://thirdi.looker.com/dashboards/149?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" target="_blank" style="color:black;">
+                                <p><a href="https://thirdi.looker.com/dashboards/173?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" target="_blank" style="color:black;">
                                 <img src="https://www.linkpicture.com/q/eye_1.png" style="width:25px;height:25px;align:left;float:center;margin-right:3px;" />&ensp;Overview</a></p>
                             </td>
 
                             <td  style="text-align:center; width:200px;padding-top:10px;">
-                                <p><a href="https://thirdi.looker.com/dashboards/150?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" target="_blank" style="color:black">
+                                <p><a href="https://thirdi.looker.com/dashboards/174?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" target="_blank" style="color:black">
                                 <img src="https://www.linkpicture.com/q/stock-exchange-app.png" style="width:25px;height:25px;align:left;float:center;margin-right:3px;" />&ensp;Finance</a></p>
                             </td>
 
@@ -939,12 +939,12 @@ dimension: finance_header_overview {
                            </td>
 
                            <td  style="text-align:center; width:200px;padding-top:10px;">
-                           <p><a href="https://thirdi.looker.com/dashboards/152?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" target="_blank" style="color:black">
+                           <p><a href="https://thirdi.looker.com/dashboards/176?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" target="_blank" style="color:black">
                           <img src="https://www.linkpicture.com/q/game.png" style="width:25px;height:25px;align:left;float:center;margin-right:3px;" />&ensp;Game Experience</a></p>
                            </td>
 
                             <td  style="text-align:center; width:200px;padding-top:10px;">
-                            <p><a href="https://thirdi.looker.com/dashboards/154?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}"target="_blank" style="color:black">
+                            <p><a href="https://thirdi.looker.com/dashboards/177?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}"target="_blank" style="color:black">
                             <img src="https://www.linkpicture.com/q/speaker_1.png" style="width:25px;height:25px;align:left;float:center;margin-right:3px;" />&ensp;Marketing</a></p>
                             </td>
       </tr>
@@ -964,17 +964,17 @@ dimension: finance_header_overview {
                            <table style="width:100%;height:50%;align:center;font-size:20px;padding-left: 30px;padding-top: 20px;padding-bottom: 5px;" >
                              <tr>
                                     <td style="text-align:center; width:200px;padding-top:10px;">
-                                      <p><a href="https://thirdi.looker.com/dashboards/149?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" target="_blank" style="color:black;">
+                                      <p><a href="https://thirdi.looker.com/dashboards/173?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" target="_blank" style="color:black;">
                                       <img src="https://www.linkpicture.com/q/eye_1.png" style="width:25px;height:25px;align:left;float:center;margin-right:3px;" />&ensp;Overview</a></p>
                                     </td>
 
                                     <td  style="text-align:center; width:200px;padding-top:10px;">
-                                    <p><a href="https://thirdi.looker.com/dashboards/150?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" target="_blank" style="color:black">
+                                    <p><a href="https://thirdi.looker.com/dashboards/174?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" target="_blank" style="color:black">
                                     <img src="https://www.linkpicture.com/q/stock-exchange-app.png" style="width:25px;height:25px;align:left;float:center;margin-right:3px;" />&ensp;Finance</a></p>
                                     </td>
 
                                     <td  style="text-align:center; width:200px;padding-top:10px;">
-                                    <p><a href="https://thirdi.looker.com/dashboards/151?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" target="_blank" style="color:black">
+                                    <p><a href="https://thirdi.looker.com/dashboards/175?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" target="_blank" style="color:black">
                                     <img src="https://www.linkpicture.com/q/users_2.png" style="width:25px;height:25px;align:left;float:center;margin-right:3px;" />&ensp;User Engagement</a></p>
                                     </td>
 
@@ -985,7 +985,7 @@ dimension: finance_header_overview {
                                     </td>
 
                                     <td  style="text-align:center; width:200px;padding-top:10px;">
-                                    <p><a href="https://thirdi.looker.com/dashboards/154?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}"target="_blank" style="color:black">
+                                    <p><a href="https://thirdi.looker.com/dashboards/177?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}"target="_blank" style="color:black">
                                     <img src="https://www.linkpicture.com/q/speaker_1.png" style="width:25px;height:25px;align:left;float:center;margin-right:3px;" />&ensp;Marketing</a></p>
                                     </td>
       </tr>
@@ -1005,23 +1005,23 @@ dimension: finance_header_overview {
                                  <table style="width:100%;height:50%;align:center;font-size:20px;padding-left: 30px;padding-top: 20px;padding-bottom: 5px;" >
                                    <tr>
                                           <td style="text-align:center; width:200px;padding-top:10px;">
-                                            <p><a href="https://thirdi.looker.com/dashboards/149?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" target="_blank" style="color:black;">
+                                            <p><a href="https://thirdi.looker.com/dashboards/173?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" target="_blank" style="color:black;">
                                             <img src="https://www.linkpicture.com/q/eye_1.png" style="width:25px;height:25px;align:left;float:center;margin-right:3px;" />&ensp;Overview</a></p>
                                           </td>
 
                                           <td  style="text-align:center; width:200px;padding-top:10px;">
-                                          <p><a href="https://thirdi.looker.com/dashboards/150?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" target="_blank" style="color:black">
+                                          <p><a href="https://thirdi.looker.com/dashboards/174?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" target="_blank" style="color:black">
                                           <img src="https://www.linkpicture.com/q/stock-exchange-app.png" style="width:25px;height:25px;align:left;float:center;margin-right:3px;" />&ensp;Finance</a></p>
                                           </td>
 
                                           <td  style="text-align:center; width:200px;padding-top:10px;">
-                                          <p><a href="https://thirdi.looker.com/dashboards/151?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" target="_blank" style="color:black">
+                                          <p><a href="https://thirdi.looker.com/dashboards/175?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}" target="_blank" style="color:black">
                                           <img src="https://www.linkpicture.com/q/users_2.png" style="width:25px;height:25px;align:left;float:center;margin-right:3px;" />&ensp;User Engagement</a></p>
                                           </td>
 
 
                                           <td  style="text-align:center; width:200px;padding-top:10px;">
-                                          <p><a href="https://thirdi.looker.com/dashboards/152?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}"target="_blank" style="color:black">
+                                          <p><a href="https://thirdi.looker.com/dashboards/176?Month={{ _filters['ga_dim_date.date__month'] | url_encode }}&Country={{ _filters['ga_dim_country.country'] | url_encode }}&Platform={{ _filters['ga_dim_platform.platform'] | url_encode }}&Game={{ _filters['ga_dim_game.game'] | url_encode }}"target="_blank" style="color:black">
                                           <img src="https://www.linkpicture.com/q/game.png" style="width:25px;height:25px;align:left;float:center;margin-right:3px;" />&ensp;Game Experience</a></p>
                                           </td>
 
