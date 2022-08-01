@@ -776,7 +776,7 @@ measure: Load_Time_LM{
       <table style="width:100%;height:50%;line-height: 1.3;align:center;font-size:14px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
        <tr>
       <td style="text-align:LEFT;width:200px;padding-top: 15px;font-size:13px;padding-left:4px;">
-      <p >LEVEL&nbsp;STATISTICS<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{game_experience_derived.Level_Starts_This_Month._rendered_value}}</b><br style="line-height:1.5;">&nbsp;Start
+      <p >LVL&nbsp;STATISTICS<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{game_experience_derived.Level_Starts_This_Month._rendered_value}}</b><br style="line-height:1.5;">&nbsp;Start
       </p>
       </td>
        <td style="text-align:left;width:200px;padding-top: 15px;font-size:14px;padding-left:4px;">
@@ -805,15 +805,15 @@ measure: Load_Time_LM{
       <table style="width:100%;height:50%;line-height: 1.0;align:center;font-size:14px;padding-left: 30px;padding-top: 20px;padding-bottom: 15px;background-color: #ffffff;border-radius: 5px; " >
       <tr style="line-height:1.0">
 
-      <td style="text-align:LEFT; line-height:1.0;width:200px;font-size:13px;">AVG.&nbsp;LEVEL <br> SCORES
+      <td style="text-align:LEFT; line-height:1.0;width:200px;font-size:13px;">AVG.&nbsp;LVL <br> SCORES
       </td>
       </tr>
       <tr>
-      <td style="text-align:LEFT;width:200px;line-height:1.0;padding-top: 30px;font-size:14px;padding-left:5px;">
+      <td style="text-align:left;width:200px;line-height:1.0;padding-top: 30px;font-size:14px;padding-left:5px;Padding-top:30px;">
       <p ><b style="font-size:29.5px; ">{{game_experience_derived.Level_Fail_selected_month._rendered_value}}</b><br style="line-height:1.5;">Fail
       </p>
       </td>
-      <td style="text-align:LEFT; line-height:3.5;width:200px;font-size:13px;">
+      <td style="text-align:LEFT; width:200px;font-size:13px;padding-top:30px;">
       <p>
       {% if game_experience_derived.Level_Fail_Scores_Growth._value >= 0 %}
 
@@ -828,12 +828,12 @@ measure: Load_Time_LM{
       </p>
       </td>
 
-       <td style="text-align:center; line-height:1.0;width:200px;font-size:14px;">
+       <td style="text-align:center; line-height:1.0;width:200px;font-size:14px;Padding-top:10px;">
       <p><br style="line-height:1.5;"><b style="font-size:29.5px; ">
       {{ game_experience_derived.Level_Complete_selected_month._rendered_value }}<br style="line-height:1.5;"></b>Complete
       </p>
       </td>
-      <td style="text-align:center; line-height:1.0;width:200px;font-size:13px;padding-top:30px;">
+      <td style="text-align:right; line-height:1.0;width:200px;font-size:13px;padding-top:30px;">
       <p>
       {% if game_experience_derived.Level_Complete_Scores_Growth._value >= 0 %}
 

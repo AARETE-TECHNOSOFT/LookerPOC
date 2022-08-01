@@ -1465,7 +1465,7 @@ view: ga_finance {
       <p >AVG.&nbsp;SCREENS / VISIT<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{ga_finance.ScreensVisits_selected_month._rendered_value}}</b>
       </p>
       </td>
-      <td style="text-align:center;width:200px;padding-top: 25px;font-size:13px;padding-left:40px;">
+      <td style="text-align:center;width:200px;padding-top: 25px;font-size:13px;padding-left:30px;">
       <p>
       {% if ga_finance.ScreenVisits_Growth._value >= 0 %}
 
@@ -1578,7 +1578,7 @@ view: ga_finance {
       <p >AVG.&nbsp;SESSION&nbsp;DEPTH<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{ga_finance.SessionDepth_selected_month._rendered_value}}</b>&nbsp;Levels
       </p>
       </td>
-      <td style="text-align:center;width:200px;padding-top: 25px;font-size:13px;padding-left:40px;">
+      <td style="text-align:center;width:200px;padding-top: 25px;font-size:13px;padding-left:30px;">
       <p>
       {% if ga_finance.SessionDepth_Growth._value >= 0 %}
 
@@ -1809,7 +1809,7 @@ view: ga_finance {
       <p >CONVERSION&nbsp;RATE&nbsp;BREAKDOWN<br style="line-height:1.5;"><b style="font-size:29.5px; ">{{ga_finance.PD_Conversion_Rate_TM._rendered_value}}</b><br> Paid
       </p>
       </td>
-      <td style="text-align:left;width:200px;padding-top: 15px;font-size:14px;padding-left:15px;">
+      <td style="text-align:left;width:200px;padding-top: 15px;font-size:14px;padding-left:10px;">
       <p ><br style="line-height:1.5;"><b style="font-size:29.5px; ">{{ga_finance.Org_Conversion_Rate_TM._rendered_value}}</b><br> Organic
       </p>
       </td>
