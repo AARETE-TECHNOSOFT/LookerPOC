@@ -53,6 +53,8 @@ view: hr_dates {
   dimension: yearvalue {
     type:string
     sql:${TABLE}.YEARVALUE;;
+   # order_by_field: yearvalue
+    suggestions: ["2018","2017","2016"]
     # html:
     # <a href="https://thirdi.looker.com/dashboards/110?Department=IT%2FIS&Year={{ _filters['hr_dates.yearvalue'] | url_encode }}">{{ value }}</a>
 
@@ -75,7 +77,10 @@ view: hr_dates {
     value_format: "###0"
     sql:${TABLE}.YEARVALUE;;
   }
+  dimension: Year_Month {
 
+    sql: concat(${mon},${Year_value_No}) ;;
+  }
   measure: count {
     type: count
     drill_fields: [weekdayvaluename, monthvaluename]
