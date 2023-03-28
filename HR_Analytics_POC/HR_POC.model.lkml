@@ -1,4 +1,4 @@
-connection: "test_oracle"
+connection: "looker_poc"
 include: "/**/*.view.lkml"
 
 
