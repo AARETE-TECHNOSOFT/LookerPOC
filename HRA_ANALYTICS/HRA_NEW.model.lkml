@@ -1,4 +1,4 @@
-connection: "new_test_server"
+connection: "looker_poc"
 include: "/**/*.view.lkml"
 
 
